@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const FinalCTA = () => {
   return (
@@ -9,11 +10,13 @@ const FinalCTA = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-50" />
           
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              Drop files. Choose a format. Done.
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 flex flex-col gap-2">
+              <span>Drop files.</span>
+              <span>Choose a format.</span>
+              <span>Done.</span>
             </h2>
             <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Join thousands of Mac users who have simplified their file workflow with Converleon
+              Join Mac users who have simplified their file workflow with Converleon
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -21,15 +24,18 @@ const FinalCTA = () => {
                 Download on the Mac App Store
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="text-lg px-8 py-6 glass-card"
-                onClick={() => window.location.assign("mailto:converleonapp@gmail.com")}
+              <a 
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=converleonapp@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  buttonVariants({ variant: "outline", size: "lg" }),
+                  "text-lg px-8 py-6 glass-card cursor-pointer"
+                )}
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Contact Support
-              </Button>
+              </a>
             </div>
           </div>
         </div>
