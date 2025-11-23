@@ -11,38 +11,38 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto">
       <div className="text-center mb-12 animate-fade-in">
         <div className="relative mb-12">
-          <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold leading-tight relative z-10">
+          <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold leading-tight relative z-10">
             <span className="gradient-text">Converleon</span>
           </h1>
           <div className="absolute inset-0 blur-3xl opacity-30 bg-gradient-to-r from-primary via-accent to-primary animate-pulse" />
         </div>
         
-        <div className="flex items-center justify-center gap-8 mb-8">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mb-8">
           <img 
             src={appIcon} 
             alt="Converleon app icon" 
             className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-3xl shadow-2xl animate-scale-in"
           />
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-left">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-center md:text-left">
             One app for every
             <br />
             <span className="gradient-text">file job on Mac</span>
           </h2>
         </div>
           
-          <div className="flex items-center justify-center gap-3 mb-6 text-2xl md:text-3xl font-semibold">
-            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2">
-              <Sparkles className="h-6 w-6 text-primary" />
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-6 text-xl md:text-3xl font-semibold">
+            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2 w-full md:w-auto justify-center">
+              <Sparkles className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               <span>One Drop</span>
             </div>
-            <ArrowRight className="h-8 w-8 text-primary" />
-            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2">
-              <MousePointerClick className="h-6 w-6 text-primary" />
+            <ArrowRight className="h-6 w-6 md:h-8 md:w-8 text-primary rotate-90 md:rotate-0" />
+            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2 w-full md:w-auto justify-center">
+              <MousePointerClick className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               <span>One Tap</span>
             </div>
-            <ArrowRight className="h-8 w-8 text-primary" />
-            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2">
-              <Check className="h-6 w-6 text-primary" />
+            <ArrowRight className="h-6 w-6 md:h-8 md:w-8 text-primary rotate-90 md:rotate-0" />
+            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2 w-full md:w-auto justify-center">
+              <Check className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               <span>Done</span>
             </div>
           </div>
