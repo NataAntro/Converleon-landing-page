@@ -5,6 +5,10 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // ВАЖНО для GitHub Pages:
+  // имя репозитория с учетом регистра
+  base: "/Converleon-landing-page/",
+
   server: {
     host: "::",
     port: 8080,
