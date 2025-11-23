@@ -8,12 +8,30 @@ const Hero = () => {
       <div className="absolute inset-0 grid-pattern opacity-50" />
       
       <div className="relative z-10 max-w-7xl mx-auto">
-        <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-            One app for every
-            <br />
-            <span className="gradient-text">file job on Mac</span>
-          </h1>
+      <div className="text-center mb-12 animate-fade-in">
+        <div className="mb-8">
+          <p className="text-6xl md:text-8xl lg:text-9xl font-bold mb-2 leading-tight tracking-tight">
+            <span className="gradient-text">One Drop</span>
+          </p>
+          <p className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 leading-tight">
+            →
+          </p>
+          <p className="text-6xl md:text-8xl lg:text-9xl font-bold mb-2 leading-tight tracking-tight">
+            <span className="gradient-text">One Tap</span>
+          </p>
+          <p className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 leading-tight">
+            →
+          </p>
+          <p className="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tight">
+            <span className="gradient-text">Done</span>
+          </p>
+        </div>
+        
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          One app for every
+          <br />
+          <span className="gradient-text">file job on Mac</span>
+        </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed">
             Drop → tap → done. Batch convert mixed files, merge PDFs from anything, export PDFs page by page, extract audio, and pack/unpack archives — offline, on-device, zero setup.
