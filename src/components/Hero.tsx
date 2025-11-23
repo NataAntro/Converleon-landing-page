@@ -10,9 +10,12 @@ const Hero = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto">
       <div className="text-center mb-12 animate-fade-in">
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-12 leading-tight">
-          <span className="gradient-text">Converleon</span>
-        </h1>
+        <div className="relative mb-12">
+          <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold leading-tight relative z-10">
+            <span className="gradient-text">Converleon</span>
+          </h1>
+          <div className="absolute inset-0 blur-3xl opacity-30 bg-gradient-to-r from-primary via-accent to-primary animate-pulse" />
+        </div>
         
         <div className="flex items-center justify-center gap-8 mb-8">
           <img 
