@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, MousePointerClick, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-screenshot.png";
+import appIcon from "@/assets/app-icon.png";
 
 const Hero = () => {
   return (
@@ -9,32 +10,42 @@ const Hero = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto">
       <div className="text-center mb-12 animate-fade-in">
-        <div className="mb-8">
-          <p className="text-6xl md:text-8xl lg:text-9xl font-bold mb-2 leading-tight tracking-tight">
-            <span className="gradient-text">One Drop</span>
-          </p>
-          <p className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 leading-tight">
-            →
-          </p>
-          <p className="text-6xl md:text-8xl lg:text-9xl font-bold mb-2 leading-tight tracking-tight">
-            <span className="gradient-text">One Tap</span>
-          </p>
-          <p className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 leading-tight">
-            →
-          </p>
-          <p className="text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tight">
-            <span className="gradient-text">Done</span>
-          </p>
-        </div>
-        
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-          One app for every
-          <br />
-          <span className="gradient-text">file job on Mac</span>
+        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-12 leading-tight">
+          <span className="gradient-text">Converleon</span>
         </h1>
+        
+        <div className="flex items-center justify-center gap-8 mb-8">
+          <img 
+            src={appIcon} 
+            alt="Converleon app icon" 
+            className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-3xl shadow-2xl animate-scale-in"
+          />
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-left">
+            One app for every
+            <br />
+            <span className="gradient-text">file job on Mac</span>
+          </h2>
+        </div>
+          
+          <div className="flex items-center justify-center gap-3 mb-6 text-2xl md:text-3xl font-semibold">
+            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2">
+              <Sparkles className="h-6 w-6 text-primary" />
+              <span>One Drop</span>
+            </div>
+            <ArrowRight className="h-8 w-8 text-primary" />
+            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2">
+              <MousePointerClick className="h-6 w-6 text-primary" />
+              <span>One Tap</span>
+            </div>
+            <ArrowRight className="h-8 w-8 text-primary" />
+            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2">
+              <Check className="h-6 w-6 text-primary" />
+              <span>Done</span>
+            </div>
+          </div>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed">
-            Drop → tap → done. Batch convert mixed files, merge PDFs from anything, export PDFs page by page, extract audio, and pack/unpack archives — offline, on-device, zero setup.
+            Batch convert mixed files, merge PDFs from anything, export PDFs page by page, extract audio, and pack/unpack archives — offline, on-device, zero setup.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
