@@ -10,11 +10,19 @@ const Footer = () => {
             </p>
           </div>
           
-          <div className="md:text-right">
-            <p className="text-muted-foreground mb-2">
+          <div className="md:text-right flex flex-col items-start md:items-end gap-2">
+            <p className="text-muted-foreground">
               <span className="font-semibold text-foreground">Support:</span>{" "}
               converleonapp@gmail.com
             </p>
+            <a 
+              href="/privacy-policy.html" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Privacy Policy
+            </a>
           </div>
         </div>
       </div>
