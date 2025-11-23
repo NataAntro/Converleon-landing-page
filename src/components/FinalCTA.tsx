@@ -25,12 +25,10 @@ const FinalCTA = () => {
                 size="lg" 
                 variant="outline" 
                 className="text-lg px-8 py-6 glass-card"
-                asChild
+                onClick={() => window.location.assign("mailto:converleonapp@gmail.com")}
               >
-                <a href="mailto:converleonapp@gmail.com">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Contact Support
-                </a>
+                <Mail className="mr-2 h-5 w-5" />
+                Contact Support
               </Button>
             </div>
           </div>
