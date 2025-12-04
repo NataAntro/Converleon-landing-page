@@ -1,5 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, MousePointerClick, Sparkles } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { ArrowRight, Check, MousePointerClick, Sparkles, X } from "lucide-react";
 import heroImage from "@/assets/hero-screenshot.png";
 import appIcon from "@/assets/app-icon.png";
 
@@ -52,13 +59,42 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Button size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90">
-              Download on the Mac App Store
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button asChild size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90">
+              <a href="https://apps.apple.com/app/converleon/id6751464821" target="_blank" rel="noreferrer">
+                Download on the Mac App Store
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 glass-card">
-              See how it works
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6 glass-card">
+                  See how it works
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-4xl glass-card border-0 [&>button]:hidden">
+                <div className="flex justify-end">
+                  <DialogClose asChild>
+                    <Button
+                      size="icon"
+                      variant="outline"
+                      className="h-10 w-10 rounded-full border bg-background/80 shadow-md hover:bg-accent"
+                    >
+                      <X className="h-4 w-4" />
+                      <span className="sr-only">Close video</span>
+                    </Button>
+                  </DialogClose>
+                </div>
+                <AspectRatio ratio={16 / 9}>
+                  <iframe
+                    src="https://www.youtube.com/embed/aXsZbqFQUNw"
+                    title="How Converleon works"
+                    className="h-full w-full rounded-lg border"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </AspectRatio>
+              </DialogContent>
+            </Dialog>
           </div>
           
           <div className="flex flex-wrap gap-6 justify-center text-sm text-muted-foreground">
