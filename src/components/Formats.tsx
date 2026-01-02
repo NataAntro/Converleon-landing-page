@@ -22,8 +22,8 @@ const Formats = () => {
     },
     {
       category: "Audio",
-      input: "M4A, AIFF, CAF, WAV, MP3",
-      output: "M4A, AIFF, CAF, WAV",
+      input: "M4A, AIFF, CAF, WAV, FLAC, MP3",
+      output: "M4A, AIFF, CAF, WAV, FLAC",
       note: null
     },
     {
@@ -35,7 +35,7 @@ const Formats = () => {
     {
       category: "PDF tools",
       input: null,
-      output: "Export to JPG/PNG/HEIC/TIFF (split pages or combined multi-page TIFF)",
+      output: "Export page by page to PDF/JPG/PNG/HEIC/TIFF (or combined multi-page TIFF)",
       features: "Merge PDFs from images, documents, and PDFs",
       note: null
     },

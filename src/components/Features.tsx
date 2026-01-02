@@ -34,7 +34,7 @@ const Features = () => {
     },
     {
       title: "PDF to Images — Page by Page",
-      description: "Export every PDF page to JPG, PNG, HEIC, or TIFF in two steps.",
+      description: "Export every PDF page to single PDF, JPG, PNG, HEIC, or TIFF in two steps.",
       image: pdfToImages,
       reverse: false
     },

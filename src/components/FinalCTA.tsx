@@ -20,9 +20,19 @@ const FinalCTA = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90">
-                Download on the Mac App Store
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button
+                asChild
+                size="lg"
+                className="text-lg px-8 py-6 bg-primary hover:bg-primary/90"
+              >
+                <a
+                  href="https://apps.apple.com/app/converleon/id6751464821"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download on the Mac App Store
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
               <a 
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=converleonapp@gmail.com"
