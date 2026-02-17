@@ -48,7 +48,7 @@ const ArticlesCarousel = () => {
             <span className="gradient-text">Real Mac workflows.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Swipe through practical guides and open any article in one click.
+            Swipe through the guides, then go straight to the details.
           </p>
         </div>
 
@@ -57,14 +57,11 @@ const ArticlesCarousel = () => {
             align: "start",
             loop: true,
           }}
-          className="w-full"
+          className="w-full md:px-16"
         >
-          <CarouselContent>
+          <CarouselContent className="-ml-0 md:-ml-4">
             {articles.map((article) => (
-              <CarouselItem
-                key={article.href}
-                className="basis-[92%] sm:basis-[72%] lg:basis-[52%] xl:basis-[45%]"
-              >
+              <CarouselItem key={article.href} className="pl-0 md:pl-4 basis-full md:basis-1/2">
                 <article className="glass-card rounded-2xl p-6 md:p-8 h-full border border-border/60 transition-transform duration-300 hover:-translate-y-1">
                   <p className="text-xs uppercase tracking-[0.2em] text-primary mb-4">Article</p>
                   <h3 className="text-xl md:text-2xl font-bold leading-tight mb-4">{article.title}</h3>
@@ -84,8 +81,8 @@ const ArticlesCarousel = () => {
             ))}
           </CarouselContent>
 
-          <CarouselPrevious className="left-2 md:-left-4 h-10 w-10 glass-card border-border/60 hover:bg-accent/50" />
-          <CarouselNext className="right-2 md:-right-4 h-10 w-10 glass-card border-border/60 hover:bg-accent/50" />
+          <CarouselPrevious className="left-1 md:left-0 h-12 w-12 md:h-14 md:w-14 glass-card border-border/60 hover:bg-accent/50" />
+          <CarouselNext className="right-1 md:right-0 h-12 w-12 md:h-14 md:w-14 glass-card border-border/60 hover:bg-accent/50" />
         </Carousel>
       </div>
     </section>
