@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import HeicToPngMacBatchConvert from "./pages/HeicToPngMacBatchConvert";
+import MergePdfMacCombineWordImages from "./pages/MergePdfMacCombineWordImages";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/heic-to-png-mac-batch-convert" element={<HeicToPngMacBatchConvert />} />
           <Route path="/heic-to-png-mac-batch-convert/" element={<HeicToPngMacBatchConvert />} />
+          <Route path="/merge-pdf-mac-combine-word-images" element={<MergePdfMacCombineWordImages />} />
+          <Route path="/merge-pdf-mac-combine-word-images/" element={<MergePdfMacCombineWordImages />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
