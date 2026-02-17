@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import HeicToPngMacBatchConvert from "./pages/HeicToPngMacBatchConvert";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,8 @@ const App = () => (
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/heic-to-png-mac-batch-convert" element={<HeicToPngMacBatchConvert />} />
+          <Route path="/heic-to-png-mac-batch-convert/" element={<HeicToPngMacBatchConvert />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
