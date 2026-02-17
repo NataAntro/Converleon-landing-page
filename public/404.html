@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Converleon</title>
+    <script>
+      // GitHub Pages SPA fallback: redirect unknown paths to index with encoded route.
+      var segmentCount = 0;
+      var locationRef = window.location;
+
+      locationRef.replace(
+        locationRef.protocol +
+          "//" +
+          locationRef.hostname +
+          (locationRef.port ? ":" + locationRef.port : "") +
+          locationRef.pathname.split("/").slice(0, 1 + segmentCount).join("/") +
+          "/?/" +
+          locationRef.pathname
+            .slice(1)
+            .split("/")
+            .slice(segmentCount)
+            .join("/")
+            .replace(/&/g, "~and~") +
+          (locationRef.search ? "&" + locationRef.search.slice(1).replace(/&/g, "~and~") : "") +
+          locationRef.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

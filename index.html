@@ -11,6 +11,20 @@
       gtag('config', 'G-34YXKYYKVH');
     </script>
     <meta charset="UTF-8" />
+    <script>
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (part) {
+              return part.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(null, "", l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })(window.location);
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Converleon — All-in-one Offline File Converter for macOS</title>
     <meta name="description" content="Batch convert mixed files, merge PDFs from anything, export PDF pages, extract audio, and handle archives — drop → tap → done, fully offline." />
