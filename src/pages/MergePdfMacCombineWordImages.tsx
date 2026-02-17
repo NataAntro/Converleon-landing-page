@@ -89,8 +89,9 @@ const MergePdfMacCombineWordImages = () => {
               <li className="space-y-3">
                 <h4 className="text-lg font-semibold text-foreground">Drop everything at once</h4>
                 <p className="leading-relaxed">
-                  Select Word files, image scans, and PDF files, then drag them into Converleon together. You do not
-                  need to convert them one by one beforehand.
+                  Select your Word files, image scans, and PDF files, then drag and drop them onto the Converleon icon
+                  at the top of the app. This opens the action bubble for mixed inputs. You do not need to convert them
+                  one by one beforehand.
                 </p>
                 <figure className="space-y-2">
                   <img
@@ -107,7 +108,7 @@ const MergePdfMacCombineWordImages = () => {
               <li className="space-y-3">
                 <h4 className="text-lg font-semibold text-foreground">Click "Merge PDF"</h4>
                 <p className="leading-relaxed">
-                  Instead of choosing an output format for each file, select the Merge PDF action.
+                  In the bubble, choose the Merge PDF action instead of selecting an output format for each file.
                 </p>
               </li>
 

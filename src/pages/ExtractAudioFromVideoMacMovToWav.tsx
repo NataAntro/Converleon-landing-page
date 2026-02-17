@@ -91,8 +91,8 @@ const ExtractAudioFromVideoMacMovToWav = () => {
               <li className="space-y-3">
                 <h3 className="text-lg font-semibold text-foreground">Drop your video file</h3>
                 <p className="leading-relaxed">
-                  Open Converleon and drag a video file, or a whole folder of videos, into the app window. You do not
-                  need to sort first because video inputs are detected automatically.
+                  Open Converleon and drag one video file (or select multiple video files) from Finder onto the
+                  Converleon icon at the top of the app. Video inputs are detected automatically.
                 </p>
                 <figure className="space-y-2">
                   <img
@@ -110,7 +110,7 @@ const ExtractAudioFromVideoMacMovToWav = () => {
                 <h3 className="text-lg font-semibold text-foreground">Click your audio format</h3>
                 <p className="leading-relaxed">
                   The app shows Extract Audio choices after you drop video files. For MOV to WAV extraction, choose WAV
-                  when editing quality matters; choose M4A (AAC) for general playback and voice memos.
+                  when editing quality matters; choose M4A for general playback and voice memos.
                 </p>
               </li>
 
@@ -154,8 +154,8 @@ const ExtractAudioFromVideoMacMovToWav = () => {
               <div>
                 <h3 className="text-xl font-semibold">Why can&apos;t I export to MP3?</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  MP3 requires specific licensing that many indie apps avoid to keep costs lower. M4A (AAC) is native on
-                  Apple devices and typically delivers better fidelity than MP3 at the same bitrate.
+                  MP3 requires specific licensing that many indie apps avoid to keep costs lower. M4A is widely
+                  supported on Apple devices and works well for most everyday playback.
                 </p>
               </div>
               <div>

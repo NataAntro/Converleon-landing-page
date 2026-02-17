@@ -48,9 +48,9 @@ const HeicToPngMacBatchConvert = () => {
               HEIC to PNG on Mac: Batch Convert iPhone Photos (Offline & Fast)
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              If you moved a folder of iPhone photos to your Mac and now those HEIC files will not upload to a website,
-              you are not alone. Many forms and editors still reject HEIC even though macOS previews it normally. If
-              you need a fast HEIC to PNG Mac workflow, the quickest fix is to process the whole folder at once instead
+              If you moved iPhone photos to your Mac and now those HEIC files will not upload to a website, you are
+              not alone. Many forms and editors still reject HEIC even though macOS previews it normally. If you need a
+              fast HEIC to PNG Mac workflow, the quickest fix is to convert your photos in one batch selection instead
               of exporting each image one by one in Preview. Converleon lets you convert HEIC to PNG on Mac in seconds,
               offline, so your photos stay on-device. This guide shows exactly how to batch convert iPhone photos with
               a simple Drop -&gt; Click -&gt; Done flow.
@@ -61,7 +61,7 @@ const HeicToPngMacBatchConvert = () => {
             <h2 className="text-2xl md:text-3xl font-semibold">How to Batch Convert HEIC to PNG on Mac Without Quality Loss</h2>
             <p className="text-muted-foreground leading-relaxed">
               You do not need to open every image manually. With one batch action, you can generate PNG or JPG outputs
-              from a full folder and keep your workflow fast.
+              from a large set of selected files and keep your workflow fast.
             </p>
           </section>
 
@@ -78,7 +78,7 @@ const HeicToPngMacBatchConvert = () => {
             <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
               <li>A Mac running macOS 13.5 or later.</li>
               <li>Converleon installed from the App Store.</li>
-              <li>Your folder of HEIC images.</li>
+              <li>A folder containing your HEIC images.</li>
             </ul>
           </section>
 
@@ -91,8 +91,8 @@ const HeicToPngMacBatchConvert = () => {
               <li className="space-y-3">
                 <h4 className="text-lg font-semibold text-foreground">Drop your files</h4>
                 <p className="leading-relaxed">
-                  Open Converleon and drag your HEIC photos from Finder into the app window. You can drop loose files
-                  or full folders without sorting first.
+                  Open Finder, select the HEIC files you want to convert (you can multi-select hundreds), then drag and
+                  drop the selection onto the Converleon icon at the top of the app. This triggers the format bubble.
                 </p>
                 <figure className="space-y-2">
                   <img
@@ -109,7 +109,7 @@ const HeicToPngMacBatchConvert = () => {
               <li className="space-y-3">
                 <h4 className="text-lg font-semibold text-foreground">Click your format</h4>
                 <p className="leading-relaxed">
-                  The app detects image inputs automatically. Choose PNG (or JPG) from the format options at the bottom.
+                  In the bubble, choose PNG (or JPG). Converleon automatically recognizes you are working with images.
                 </p>
               </li>
 

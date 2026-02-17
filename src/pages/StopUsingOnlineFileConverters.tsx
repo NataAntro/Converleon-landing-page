@@ -48,21 +48,18 @@ const StopUsingOnlineFileConverters = () => {
           <header className="space-y-5">
             <h1 className="text-3xl md:text-5xl font-bold leading-tight">Why You Should Stop Using Online File Converters</h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              If you handle contracts, finance reports, or personal records, uploading them to unknown web converters is
-              a serious privacy risk. Free cloud tools may keep files longer than expected, log usage metadata, and move
-              sensitive data outside your control. A Secure file converter Mac setup is safer because processing stays on
-              your device from start to finish. Converleon is an offline file converter on Mac built for teams and
-              individuals who care about confidentiality, predictable performance, and local processing without account
-              friction. You keep documents on your own drive and avoid unnecessary exposure through third-party upload
-              workflows.
+              We have all done it: googled "convert PDF to Word free" and uploaded a document to the first website that
+              popped up. But when that document contains financial data, legal contracts, or personal photos, this habit
+              becomes a major security risk. For Mac users, switching to a native, offline app like Converleon is not
+              just about convenience. It is about data sovereignty.
             </p>
           </header>
 
           <section className="space-y-4">
             <h2 className="text-2xl md:text-3xl font-semibold">Online vs. Offline Converters: Why Local Processing Wins</h2>
             <p className="text-muted-foreground leading-relaxed">
-              The workflow is familiar, but the security model is different. A privacy-first converter that runs locally
-              gives you more control than cloud conversion websites.
+              A secure file converter Mac workflow keeps sensitive files on your device instead of uploading them to
+              third-party servers.
             </p>
           </section>
 
@@ -89,7 +86,7 @@ const StopUsingOnlineFileConverters = () => {
 
             <Alert className="glass-card border-border/60">
               <AlertTitle>No Accounts, No Uploads, No Tracking</AlertTitle>
-              <AlertDescription>Converleon is built around this policy as the default behavior.</AlertDescription>
+              <AlertDescription>Converleon was built with this policy as the default behavior.</AlertDescription>
             </Alert>
 
             <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
@@ -121,10 +118,10 @@ const StopUsingOnlineFileConverters = () => {
 
           <section className="space-y-4">
             <h2 className="text-2xl md:text-3xl font-semibold">How it Works</h2>
-            <h3 className="text-xl md:text-2xl font-semibold">Offline PDF converter workflow in 3 steps</h3>
+            <h3 className="text-xl md:text-2xl font-semibold">The workflow is identical to online tools, but safer</h3>
             <ol className="list-decimal pl-6 space-y-3 text-muted-foreground">
-              <li>Drop your files onto the app dock icon or app window.</li>
-              <li>Click your target format, such as PDF, ZIP, or JPG.</li>
+              <li>Select your files in Finder and drag them onto the Converleon icon at the top of the app.</li>
+              <li>In the bubble that appears, click your target format (e.g., PDF, ZIP, JPG).</li>
               <li>Done. The file is saved instantly to your drive.</li>
             </ol>
           </section>
@@ -135,15 +132,16 @@ const StopUsingOnlineFileConverters = () => {
               <div>
                 <h3 className="text-xl font-semibold">Is it really offline?</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Yes. You can turn off Wi-Fi and Converleon will continue to work without an internet connection.
+                  Yes. You can turn off your Wi-Fi and Converleon will work perfectly. It requires no internet
+                  connection.
                 </p>
               </div>
 
               <div>
                 <h3 className="text-xl font-semibold">Can I convert password-protected archives?</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Yes. Converleon unpacks password-protected ZIP and RAR archives locally, so the password is never sent
-                  over the network.
+                  Yes, Converleon allows you to unpack password-protected ZIP and RAR files locally, ensuring your
+                  password is never transmitted over the network.
                 </p>
               </div>
             </div>
@@ -152,8 +150,8 @@ const StopUsingOnlineFileConverters = () => {
           <section className="space-y-5">
             <h2 className="text-2xl md:text-3xl font-semibold">Conclusion</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Security does not need to make your workflow slower. With a native macOS converter, you can finish the
-              job in two clicks while keeping sensitive files where they belong: on your Mac.
+              Security does not have to be complicated. By using a native macOS utility, you get the job done in
+              2 clicks without compromising your privacy. Keep your files on your Mac, where they belong.
             </p>
             <div>
               <a
