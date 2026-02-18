@@ -45,8 +45,10 @@ const MergePdfMacCombineWordImages = () => {
   return (
     <div className="min-h-screen">
       <main className="px-4 py-16 md:py-20">
-        <article className="mx-auto max-w-4xl glass-card rounded-3xl p-6 md:p-10 lg:p-12 space-y-8">
+        <div className="mx-auto max-w-4xl mb-4">
           <ArticleBackLink />
+        </div>
+        <article className="mx-auto max-w-4xl glass-card rounded-3xl p-6 md:p-10 lg:p-12 space-y-8">
           <header className="space-y-5">
             <h1 className="text-3xl md:text-5xl font-bold leading-tight">
               Merge PDF on Mac: Combine Word, Images &amp; PDF Files
