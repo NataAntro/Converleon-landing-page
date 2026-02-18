@@ -105,6 +105,9 @@ const ConvertVoiceMemosWavMac = () => {
                     alt="Screenshot of batch converting M4A Voice Memos to WAV in Converleon on macOS."
                     className="w-full rounded-2xl border border-border/60"
                   />
+                  <figcaption className="text-sm text-muted-foreground">
+                    Converting compressed iPhone voice memos to uncompressed WAV for editing.
+                  </figcaption>
                 </figure>
               </li>
 

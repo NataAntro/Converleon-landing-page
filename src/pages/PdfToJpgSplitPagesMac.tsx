@@ -97,6 +97,9 @@ const PdfToJpgSplitPagesMac = () => {
                     alt="Screenshot of dropping a PDF file into Converleon for page extraction."
                     className="w-full rounded-2xl border border-border/60"
                   />
+                  <figcaption className="text-sm text-muted-foreground">
+                    Automatically splitting a PDF document into separate high-quality PNG images.
+                  </figcaption>
                 </figure>
               </li>
 

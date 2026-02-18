@@ -103,6 +103,9 @@ const OpenRar7zMacConverter = () => {
                     alt="Screenshot of dragging a RAR file into Converleon on macOS."
                     className="w-full rounded-2xl border border-border/60"
                   />
+                  <figcaption className="text-sm text-muted-foreground">
+                    Handling password-protected archives and unpacking RAR files locally.
+                  </figcaption>
                 </figure>
               </li>
 

@@ -99,6 +99,9 @@ const FlacToM4aWavMacConverter = () => {
                     alt="Screenshot of batch converting FLAC audio files in Converleon on macOS."
                     className="w-full rounded-2xl border border-border/60"
                   />
+                  <figcaption className="text-sm text-muted-foreground">
+                    Batch converting multiple FLAC music tracks to Apple-native M4A format.
+                  </figcaption>
                 </figure>
               </li>
               <li className="space-y-3">
