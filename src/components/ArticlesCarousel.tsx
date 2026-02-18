@@ -39,7 +39,7 @@ const articles = [
 
 const ArticlesCarousel = () => {
   return (
-    <section className="py-24 px-4">
+    <section id="learn-guides" className="py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -57,7 +57,7 @@ const ArticlesCarousel = () => {
             align: "start",
             loop: true,
           }}
-          className="w-full md:px-16"
+          className="w-full px-14 md:px-16"
         >
           <CarouselContent className="-ml-0 md:-ml-4">
             {articles.map((article) => (
@@ -81,8 +81,8 @@ const ArticlesCarousel = () => {
             ))}
           </CarouselContent>
 
-          <CarouselPrevious className="left-1 md:left-0 h-12 w-12 md:h-14 md:w-14 glass-card border-border/60 hover:bg-accent/50" />
-          <CarouselNext className="right-1 md:right-0 h-12 w-12 md:h-14 md:w-14 glass-card border-border/60 hover:bg-accent/50" />
+          <CarouselPrevious className="left-2 md:left-0 h-12 w-12 md:h-14 md:w-14 glass-card border-border/60 hover:bg-accent/50" />
+          <CarouselNext className="right-2 md:right-0 h-12 w-12 md:h-14 md:w-14 glass-card border-border/60 hover:bg-accent/50" />
         </Carousel>
       </div>
     </section>
