@@ -183,7 +183,7 @@ const HeicToPngMacBatchConvert = () => {
               >
                 Download Converleon for Mac
               </a>
-              <p className="mt-3 text-sm text-muted-foreground">Free download on the Mac App Store. No account required.</p>
+              <p className="mt-3 text-sm text-muted-foreground">(Batch convert iPhone photos instantly. 100% offline.)</p>
             </div>
           </section>
         </article>

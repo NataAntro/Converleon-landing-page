@@ -166,7 +166,7 @@ const StopUsingOnlineFileConverters = () => {
               >
                 Secure Your Workflow with Converleon
               </a>
-              <p className="mt-3 text-sm text-muted-foreground">(Data Not Collected. 100% Offline.)</p>
+              <p className="mt-3 text-sm text-muted-foreground">(Secure, private, local file processing. No cloud uploads.)</p>
             </div>
           </section>
         </article>

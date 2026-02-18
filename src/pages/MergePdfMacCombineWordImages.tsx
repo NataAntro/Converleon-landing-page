@@ -173,7 +173,7 @@ const MergePdfMacCombineWordImages = () => {
               >
                 Get Converleon on the App Store
               </a>
-              <p className="mt-3 text-sm text-muted-foreground">(Secure &amp; Offline. No uploads needed.)</p>
+              <p className="mt-3 text-sm text-muted-foreground">(Combine Word, images, and PDFs in two clicks.)</p>
             </div>
           </section>
         </article>

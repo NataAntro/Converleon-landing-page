@@ -93,8 +93,9 @@ const OpenRar7zMacConverter = () => {
               <li className="space-y-3">
                 <h3 className="text-lg font-semibold text-foreground">Drop your archive</h3>
                 <p className="leading-relaxed">
-                  Drag your RAR, 7Z, TAR, or GZ file from Finder onto the Converleon icon. You can drop multiple
-                  archives at once.
+                  Drag your archive file from Finder onto the Converleon icon. Converleon supports a wide range of
+                  formats including ZIP, RAR, 7Z, CBR, TAR, GZ, XZ, BZ2, and more. You can drop multiple archives at
+                  once.
                 </p>
                 <figure className="space-y-2">
                   <img
@@ -155,17 +156,20 @@ const OpenRar7zMacConverter = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold">Can I password-protect my output?</h3>
+                <h3 className="text-xl font-semibold">Will filenames with old or broken encodings open correctly?</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Yes. When you pack files into a ZIP using Converleon, you can add a password. Output is ZIP, not RAR
-                  or 7Z.
+                  Yes. Standard macOS tools often mangle filenames in older archives due to encoding issues.
+                  Converleon automatically fixes broken encodings, ensuring all filenames inside the archive are
+                  correct and readable inside the extracted folder.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold">Does this work with split archives (part1.rar, part2.rar)?</h3>
+                <h3 className="text-xl font-semibold">
+                  Does it handle files with double extensions like .tar.gz?
+                </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  For best results, keep all parts of the split archive in the same folder before dropping the first
-                  part into Converleon.
+                  Yes. Converleon correctly recognizes and unpacks compound archive formats like .tar.gz or .tar.bz2
+                  in a single step.
                 </p>
               </div>
             </div>
@@ -186,7 +190,7 @@ const OpenRar7zMacConverter = () => {
               >
                 Download Converleon for Mac
               </a>
-              <p className="mt-3 text-sm text-muted-foreground">Free download on the Mac App Store. No account required.</p>
+              <p className="mt-3 text-sm text-muted-foreground">(Open RAR &amp; 7Z archives easily. Fix broken filenames instantly.)</p>
             </div>
           </section>
         </article>

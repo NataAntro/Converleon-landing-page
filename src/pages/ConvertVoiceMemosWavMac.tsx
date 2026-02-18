@@ -150,13 +150,6 @@ const ConvertVoiceMemosWavMac = () => {
                   Yes. There is no short clip requirement, so long lectures and interviews can be converted the same way.
                 </p>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold">Can I batch convert a whole folder of memos?</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Yes. Drop an entire folder to batch convert multiple files. Converleon skips incompatible items and
-                  converts supported audio inputs.
-                </p>
-              </div>
             </div>
           </section>
 
@@ -175,7 +168,9 @@ const ConvertVoiceMemosWavMac = () => {
               >
                 Download Converleon for Mac
               </a>
-              <p className="mt-3 text-sm text-muted-foreground">Free download on the Mac App Store. No account required.</p>
+              <p className="mt-3 text-sm text-muted-foreground">
+                (Prepare recordings for professional editing securely on-device.)
+              </p>
             </div>
           </section>
         </article>

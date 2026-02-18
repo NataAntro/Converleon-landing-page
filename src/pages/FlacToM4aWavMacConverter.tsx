@@ -91,7 +91,7 @@ const FlacToM4aWavMacConverter = () => {
               <li className="space-y-3">
                 <h3 className="text-lg font-semibold text-foreground">Drop your audio files</h3>
                 <p className="leading-relaxed">
-                  Select FLAC files or an entire album folder and drag them onto the Converleon icon.
+                  Select FLAC files and drag them onto the Converleon icon.
                 </p>
                 <figure className="space-y-2">
                   <img
@@ -148,8 +148,8 @@ const FlacToM4aWavMacConverter = () => {
               <div>
                 <h3 className="text-xl font-semibold">Can I convert other formats like WAV to FLAC?</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Yes. Converleon supports two-way conversion, including M4A, WAV, AIFF, and CAF inputs to FLAC, M4A,
-                  or WAV outputs.
+                  Yes. Converleon supports two-way conversion, including M4A, AIFF, CAF, WAV, FLAC, and MP3 inputs to
+                  M4A, AIFF, CAF, WAV, or FLAC outputs.
                 </p>
               </div>
               <div>
@@ -176,7 +176,9 @@ const FlacToM4aWavMacConverter = () => {
               >
                 Download Converleon for Mac
               </a>
-              <p className="mt-3 text-sm text-muted-foreground">Free download on the Mac App Store. No account required.</p>
+              <p className="mt-3 text-sm text-muted-foreground">
+                (Make your lossless library iPhone-ready in minutes. Batch convert.)
+              </p>
             </div>
           </section>
         </article>

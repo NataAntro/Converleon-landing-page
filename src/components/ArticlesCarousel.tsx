@@ -83,7 +83,7 @@ const ArticlesCarousel = () => {
           }}
           className="w-full px-14 md:px-16"
         >
-          <CarouselContent className="-ml-0 md:-ml-4">
+          <CarouselContent className="-ml-0 md:-ml-4 pt-2">
             {articles.map((article) => (
               <CarouselItem key={article.href} className="pl-0 md:pl-4 basis-full md:basis-1/2">
                 <article className="glass-card rounded-2xl p-6 md:p-8 h-full border border-border/60 transition-transform duration-300 hover:-translate-y-1">

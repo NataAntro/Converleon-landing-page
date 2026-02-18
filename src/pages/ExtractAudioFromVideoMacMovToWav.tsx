@@ -187,6 +187,7 @@ const ExtractAudioFromVideoMacMovToWav = () => {
               >
                 Download Converleon for Mac
               </a>
+              <p className="mt-3 text-sm text-muted-foreground">(Extract lossless audio from video instantly on-device.)</p>
             </div>
           </section>
         </article>

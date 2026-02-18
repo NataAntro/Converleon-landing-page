@@ -101,11 +101,6 @@ const PdfToJpgSplitPagesMac = () => {
               </li>
 
               <li className="space-y-3">
-                <h3 className="text-lg font-semibold text-foreground">Choose &quot;Export Pages&quot;</h3>
-                <p className="leading-relaxed">When the action bubble appears, select Export Pages.</p>
-              </li>
-
-              <li className="space-y-3">
                 <h3 className="text-lg font-semibold text-foreground">Pick your format</h3>
                 <p className="leading-relaxed">
                   Choose the output type based on whether you need images or split documents:
@@ -149,7 +144,7 @@ const PdfToJpgSplitPagesMac = () => {
               <div>
                 <h3 className="text-xl font-semibold">Can I split a PDF into smaller PDFs?</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Yes. Choose PDF as the export format in Export Pages, and each page is saved as its own PDF file.
+                  Yes. Choose PDF as the export format, and each page is saved as its own PDF file.
                 </p>
               </div>
               <div>
@@ -184,7 +179,7 @@ const PdfToJpgSplitPagesMac = () => {
               >
                 Download Converleon for Mac
               </a>
-              <p className="mt-3 text-sm text-muted-foreground">Free download on the Mac App Store. No account required.</p>
+              <p className="mt-3 text-sm text-muted-foreground">(Export high-resolution pages or split PDFs privately.)</p>
             </div>
           </section>
         </article>
