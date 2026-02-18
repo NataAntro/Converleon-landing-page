@@ -52,7 +52,7 @@ const StopUsingOnlineFileConverters = () => {
           <header className="space-y-5">
             <h1 className="text-3xl md:text-5xl font-bold leading-tight">Why You Should Stop Using Online File Converters</h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We have all done it: googled "convert PDF to Word free" and uploaded a document to the first website that
+              We have all done it: googled "convert Word to PDF free" and uploaded a document to the first website that
               popped up. But when that document contains financial data, legal contracts, or personal photos, this habit
               becomes a major security risk. For Mac users, switching to a native, offline app like Converleon is not
               just about convenience. It is about data sovereignty.
@@ -99,8 +99,8 @@ const StopUsingOnlineFileConverters = () => {
                 your Mac and do not pass through cloud servers.
               </li>
               <li>
-                <span className="font-semibold text-foreground">Apple Silicon Speed:</span> The native macOS app uses
-                M1, M2, and M3 chips for faster local conversion.
+              <span className="font-semibold text-foreground">Apple Silicon Speed:</span>{" "}
+              The native macOS app runs on both Intel and Apple silicon (M-series) chips for fast local conversion.
               </li>
               <li>
                 <span className="font-semibold text-foreground">Apple Notarized:</span> The app is sandboxed and
