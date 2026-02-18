@@ -9,6 +9,10 @@ import HeicToPngMacBatchConvert from "./pages/HeicToPngMacBatchConvert";
 import MergePdfMacCombineWordImages from "./pages/MergePdfMacCombineWordImages";
 import ExtractAudioFromVideoMacMovToWav from "./pages/ExtractAudioFromVideoMacMovToWav";
 import StopUsingOnlineFileConverters from "./pages/StopUsingOnlineFileConverters";
+import OpenRar7zMacConverter from "./pages/OpenRar7zMacConverter";
+import FlacToM4aWavMacConverter from "./pages/FlacToM4aWavMacConverter";
+import PdfToJpgSplitPagesMac from "./pages/PdfToJpgSplitPagesMac";
+import ConvertVoiceMemosWavMac from "./pages/ConvertVoiceMemosWavMac";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +32,14 @@ const App = () => (
           <Route path="/extract-audio-from-video-mac-mov-to-wav/" element={<ExtractAudioFromVideoMacMovToWav />} />
           <Route path="/stop-using-online-file-converters" element={<StopUsingOnlineFileConverters />} />
           <Route path="/stop-using-online-file-converters/" element={<StopUsingOnlineFileConverters />} />
+          <Route path="/open-rar-7z-mac-converter" element={<OpenRar7zMacConverter />} />
+          <Route path="/open-rar-7z-mac-converter/" element={<OpenRar7zMacConverter />} />
+          <Route path="/flac-to-m4a-wav-mac-converter" element={<FlacToM4aWavMacConverter />} />
+          <Route path="/flac-to-m4a-wav-mac-converter/" element={<FlacToM4aWavMacConverter />} />
+          <Route path="/pdf-to-jpg-split-pages-mac" element={<PdfToJpgSplitPagesMac />} />
+          <Route path="/pdf-to-jpg-split-pages-mac/" element={<PdfToJpgSplitPagesMac />} />
+          <Route path="/convert-voice-memos-wav-mac" element={<ConvertVoiceMemosWavMac />} />
+          <Route path="/convert-voice-memos-wav-mac/" element={<ConvertVoiceMemosWavMac />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

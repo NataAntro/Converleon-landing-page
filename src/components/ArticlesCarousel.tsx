@@ -35,6 +35,30 @@ const articles = [
     description:
       "Learn why local conversion is faster and safer for contracts, reports, and other sensitive files on Mac.",
   },
+  {
+    href: "/open-rar-7z-mac-converter/",
+    title: "How to Open RAR and 7Z Files on Mac (No Command Line)",
+    description:
+      "Open RAR, 7Z, TAR, and GZ archives on Mac, then unpack or repack to ZIP for easy sharing in one offline workflow.",
+  },
+  {
+    href: "/flac-to-m4a-wav-mac-converter/",
+    title: "How to Convert FLAC to M4A or WAV on Mac (Batch & Offline)",
+    description:
+      "Batch process full FLAC albums to Apple-friendly M4A or production-ready WAV, without cloud uploads.",
+  },
+  {
+    href: "/pdf-to-jpg-split-pages-mac/",
+    title: "How to Export PDF Pages to JPG, PNG, or Single PDFs on Mac",
+    description:
+      "Export pages as JPG, PNG, TIFF, or HEIC, and split large PDFs into separate page files with clean quality.",
+  },
+  {
+    href: "/convert-voice-memos-wav-mac/",
+    title: "How to Convert iPhone Voice Memos to WAV on Mac (Batch)",
+    description:
+      "Convert iPhone M4A voice memos to WAV in bulk for editing in Logic, Audacity, Premiere, and other tools.",
+  },
 ];
 
 const ArticlesCarousel = () => {
