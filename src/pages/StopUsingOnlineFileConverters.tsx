@@ -103,8 +103,8 @@ const StopUsingOnlineFileConverters = () => {
               The native macOS app runs on both Intel and Apple silicon (M-series) chips for fast local conversion.
               </li>
               <li>
-                <span className="font-semibold text-foreground">Apple Notarized:</span> The app is sandboxed and
-                notarized by Apple, and it only accesses files you explicitly drop into it.
+                <span className="font-semibold text-foreground">Apple Notarized:</span> Sandboxed and notarized by
+                Apple. It accesses only the files you choose and locations you approve for saving.
               </li>
             </ul>
 
