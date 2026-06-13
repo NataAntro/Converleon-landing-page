@@ -11,12 +11,10 @@ const FinalCTA = () => {
           
           <div className="relative z-10">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 flex flex-col gap-2">
-              <span>Drop files.</span>
-              <span>Choose a format.</span>
-              <span>Done.</span>
+              Drop files. Pick a format. Done.
             </h2>
             <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Join Mac users who have simplified their file workflow with Converleon
+              The file workflow a lot of Mac users wish came built in.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

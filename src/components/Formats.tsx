@@ -11,43 +11,43 @@ const Formats = () => {
       category: "Images",
       input: "JPG/JPEG, PNG, GIF, HEIC/HEIF/HIF, WEBP, BMP, TIFF/TIF",
       output: "JPG, PNG, HEIC, PDF, TIFF, BMP",
-      actions: "Remove BG to transparent PNG, Enhance, Compress with Smallest/Balanced/Quality presets",
-      note: "Remove BG works on macOS 14 or later and needs a clear foreground subject."
+      actions: "Remove BG to transparent PNG, Enhance, and Compress (Smallest / Balanced / Quality)",
+      note: "Remove BG needs macOS 14 or later and a clear foreground subject."
     },
     {
       category: "Video",
       input: "MOV, MP4, M4V",
-      output: "MOV, MP4, M4V; compressed video saves as optimized MP4",
+      output: "MOV, MP4, M4V — compressed video saves as optimized MP4",
       audioOutput: "Audio from video: M4A, WAV",
-      actions: "Compress with Smallest/Balanced/Quality presets",
-      note: "MP3 export isn't available due to licensing restrictions."
+      actions: "Compress (Smallest / Balanced / Quality)",
+      note: "MP3 export isn't available because of licensing restrictions."
     },
     {
       category: "Audio",
       input: "M4A, AIFF, CAF, WAV, FLAC, MP3",
-      output: "M4A, AIFF, CAF, WAV, FLAC; compressed audio saves as M4A",
-      actions: "Compress with Smallest/Balanced/Quality presets",
+      output: "M4A, AIFF, CAF, WAV, FLAC — compressed audio saves as M4A",
+      actions: "Compress (Smallest / Balanced / Quality)",
       note: null
     },
     {
       category: "Documents",
       input: "DOCX, DOC, RTF, TXT, HTML, HTM",
       output: "PDF, RTF, TXT",
-      note: "DOCX → PDF preserves images and formatting; DOC → PDF may export text-only depending on the system parser."
+      note: "DOCX → PDF keeps images and formatting. DOC → PDF may come through as text only, depending on the system parser."
     },
     {
       category: "PDF tools",
       input: null,
-      output: "Export page by page to PDF/JPG/PNG/HEIC/TIFF (or combined multi-page TIFF)",
-      features: "Merge PDFs from PDF, images, and documents, including mixed batches",
-      note: "Merge supports PDF, JPG/JPEG, PNG, GIF, HEIC/HEIF/HIF, BMP, WEBP, TIFF/TIF, DOCX, DOC, RTF, TXT, HTML, and HTM. Unsupported files are skipped."
+      output: "Export page by page to PDF, JPG, PNG, HEIC, or TIFF (or one combined multi-page TIFF)",
+      features: "Merge PDFs from PDFs, images, and documents, including mixed batches",
+      note: "Merge accepts PDF, JPG/JPEG, PNG, GIF, HEIC/HEIF/HIF, BMP, WEBP, TIFF/TIF, DOCX, DOC, RTF, TXT, HTML, and HTM. Anything unsupported is skipped."
     },
     {
       category: "Archives",
       input: "ZIP, RAR, 7Z, CBR, TAR, GZ, XZ, BZ2, and more",
       output: null,
-      actions: "Unpack to folder, repack to ZIP, pack any files to ZIP",
-      note: "Password-protected 7Z archives aren't supported."
+      actions: "Unpack to a folder, repack to ZIP, or pack any files into a ZIP",
+      note: "Password-protected 7Z archives aren't supported yet."
     }
   ];
 
@@ -56,10 +56,10 @@ const Formats = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Supported Formats
+            Supported formats
           </h2>
           <p className="text-xl text-muted-foreground">
-            Everything you need to work with files on your Mac
+            What Converleon reads and writes across every file type.
           </p>
         </div>
         

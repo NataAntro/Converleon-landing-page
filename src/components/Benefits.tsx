@@ -4,33 +4,33 @@ const Benefits = () => {
   const benefits = [
     {
       icon: <FileStack className="h-8 w-8" />,
-      title: "All-in-one multi-tool",
-      description: "Images, Video, Audio, Documents, PDF Tools, Archives, Compression, and Remove BG"
+      title: "One multi-tool, not eight apps",
+      description: "Images, video, audio, documents, PDF tools, archives, compression, and Remove BG — in a single window."
     },
     {
       icon: <Layers className="h-8 w-8" />,
-      title: "Batch convert hundreds",
-      description: "Process hundreds of files at once with full batch conversion support"
+      title: "Hundreds of files at once",
+      description: "Full batch support, so a folder of files is the same effort as one."
     },
     {
       icon: <Shuffle className="h-8 w-8" />,
       title: "Smart mixed drops",
-      description: "Converts only compatible files, safely skips unsupported ones"
+      description: "Drop different file types together. Converleon converts what it can and quietly skips what it can't."
     },
     {
       icon: <FileText className="h-8 w-8" />,
-      title: "PDF superpowers",
-      description: "Merge mixed batches, export page by page to images"
+      title: "PDF, handled",
+      description: "Merge a mixed batch into one PDF, or export an existing PDF page by page to images."
     },
     {
       icon: <Archive className="h-8 w-8" />,
-      title: "Archive handling",
-      description: "Open many formats, repack to ZIP, password support for ZIP/RAR"
+      title: "Archives without the headache",
+      description: "Open most formats, repack to ZIP, and unlock password-protected ZIP and RAR files."
     },
     {
       icon: <Lock className="h-8 w-8" />,
-      title: "Privacy first",
-      description: "Fully offline, on-device processing. No cloud uploads, ever."
+      title: "Private by default",
+      description: "Everything runs on your Mac. Your files never touch a server."
     }
   ];
 
@@ -39,9 +39,7 @@ const Benefits = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Everything you need.
-            <br />
-            <span className="gradient-text">Nothing you don't.</span>
+            Does the work. Skips the busywork.
           </h2>
         </div>
         

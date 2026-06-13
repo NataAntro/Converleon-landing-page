@@ -17,12 +17,10 @@ const ArticlesCarousel = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Learn by doing.
-            <br />
-            <span className="gradient-text">Real Mac workflows.</span>
+            Real Mac workflows, start to finish
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Swipe through the guides, then go straight to the details.
+            Browse the guides, then jump straight into the steps.
           </p>
         </div>
 

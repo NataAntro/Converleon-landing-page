@@ -11,48 +11,48 @@ import heroImage from "@/assets/hero-screenshot.webp";
 const Features = () => {
   const features = [
     {
-      title: "All Your Files. Two Steps.",
-      description: "A single workflow for images, video, audio, documents, PDFs, and archives.",
+      title: "Every file type. The same two steps.",
+      description: "One workflow covers images, video, audio, documents, PDFs, and archives.",
       image: heroImage
     },
     {
-      title: "Batch Convert Mixed Files",
-      description: "Convert hundreds of files in one go — even when the drop contains different types. Pick the final format and Converleon handles the rest.",
+      title: "Batch-convert mixed files",
+      description: "Convert hundreds of files in a single pass, even when the drop holds several different types. Pick the final format and Converleon sorts out the rest.",
       image: batchConvert
     },
     {
-      title: "Compress Images, Video & Audio",
-      description: "Shrink media with simple Smallest, Balanced, and Quality presets. Images keep the right format, video becomes MP4, and audio becomes M4A.",
+      title: "Compress images, video & audio",
+      description: "Shrink media with three plain-language presets — Smallest, Balanced, Quality. Images keep the right format, video lands as MP4, audio as M4A.",
       image: compressMedia
     },
     {
-      title: "Remove Backgrounds & Enhance Photos",
-      description: "Remove image backgrounds locally and save transparent PNGs. Or improve photos with automatic color, contrast, and red-eye correction.",
+      title: "Remove backgrounds & enhance photos",
+      description: "Cut out an image background and save it as a transparent PNG, or clean up a photo with automatic color, contrast, and red-eye correction.",
       image: removeBgEnhance
     },
     {
-      title: "Convert Video & Extract Audio",
-      description: "Convert MOV/MP4/M4V, or extract audio to M4A/WAV — fast and offline.",
+      title: "Convert video & pull out audio",
+      description: "Convert MOV, MP4, and M4V, or extract just the audio track to M4A or WAV.",
       image: videoAudio
     },
     {
-      title: "Merge PDFs from Anything",
-      description: "Drop images, documents, and PDFs. Choose 'Merge PDFs' and get one clean file — unsupported items are skipped automatically.",
+      title: "Merge PDFs from almost anything",
+      description: "Drop images, documents, and PDFs together, choose Merge PDFs, and get one clean file. Unsupported items are skipped automatically.",
       image: mergePdfs
     },
     {
-      title: "PDF to Images — Page by Page",
-      description: "Export every PDF page to single PDF, JPG, PNG, HEIC, or TIFF in two steps.",
+      title: "Split PDFs to images, page by page",
+      description: "Export every page of a PDF to a single PDF, JPG, PNG, HEIC, or TIFF in two steps.",
       image: pdfToImages
     },
     {
-      title: "Unpack & Repack Archives",
-      description: "Open most archive formats, unpack to a folder, or repack to ZIP. Passwords supported for ZIP/RAR.",
+      title: "Unpack & repack archives",
+      description: "Open most archive formats, extract to a folder, or repack to ZIP. Password-protected ZIP and RAR files are supported.",
       image: unpackArchives
     },
     {
-      title: "Pack Files into ZIP",
-      description: "Create a ZIP from any files in one step while keeping folder structure.",
+      title: "Pack anything into a ZIP",
+      description: "Bundle any files into a ZIP in one step, with your folder structure intact.",
       image: packZip
     }
   ];

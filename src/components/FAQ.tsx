@@ -9,43 +9,43 @@ const FAQ = () => {
   const faqs = [
     {
       question: "Does Converleon upload my files?",
-      answer: "No, everything is processed locally on your Mac. No files are ever uploaded to the cloud or any external servers."
+      answer: "No. Everything is processed on your Mac. Nothing is sent to the cloud or any outside server."
     },
     {
-      question: "Can I drop mixed file types?",
-      answer: "Yes! Smart mixed drops allow you to drop different file types together. Converleon will convert compatible files and safely skip unsupported ones."
+      question: "Can I drop different file types together?",
+      answer: "Yes. Smart mixed drops let you combine file types in one go — Converleon converts the compatible ones and skips the rest."
     },
     {
       question: "Can I export MP3?",
-      answer: "MP3 export is not available due to licensing restrictions. However, you can export to M4A, WAV, AIFF, and CAF formats."
+      answer: "No, MP3 export isn't available because of licensing restrictions. You can export to M4A, WAV, AIFF, and CAF instead."
     },
     {
       question: "Does Remove BG upload my images?",
-      answer: "No. Background removal runs locally on your Mac and saves the result as a transparent PNG. It requires macOS 14 or later."
+      answer: "No. Background removal runs on your Mac and saves a transparent PNG. It needs macOS 14 or later."
     },
     {
       question: "How does compression work?",
-      answer: "Choose Smallest, Balanced, or Quality. Images, videos, and audio are compressed locally with practical output formats for sharing and storage."
+      answer: "Pick Smallest, Balanced, or Quality. Images, video, and audio are compressed on-device, each saved in a practical format for sharing or storage."
     },
     {
-      question: "Do you support password-protected archives?",
-      answer: "Yes, password-protected ZIP and RAR archives are supported. However, password-protected 7Z archives are not supported at this time."
+      question: "Are password-protected archives supported?",
+      answer: "Password-protected ZIP and RAR files are. Password-protected 7Z archives aren't supported yet."
     },
     {
-      question: "What happens to my folder structure when packing ZIP?",
-      answer: "Your folder structure is preserved when creating ZIP archives, maintaining the original organization of your files."
+      question: "What happens to my folder structure when I pack a ZIP?",
+      answer: "It's preserved — the ZIP keeps your files organized exactly as they were."
     },
     {
       question: "Does DOC convert to PDF with images?",
-      answer: "DOCX to PDF conversion preserves images and formatting. DOC to PDF may export text-only depending on the system parser."
+      answer: "DOCX to PDF keeps images and formatting. DOC to PDF may come through as text only, depending on the system parser."
     },
     {
-      question: "Is Converleon really offline?",
-      answer: "Yes, Converleon works completely offline with no internet connection required. All processing happens on your device."
+      question: "Is Converleon genuinely offline?",
+      answer: "Yes. No internet connection is required at any point — all the work happens on your device."
     },
     {
       question: "How many files can I convert at once?",
-      answer: "You can batch convert hundreds of files at once. The actual limit depends on your Mac's available memory and storage."
+      answer: "Hundreds in a single batch. The real ceiling is your Mac's available memory and storage."
     }
   ];
 
@@ -54,11 +54,8 @@ const FAQ = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Frequently Asked Questions
+            Common questions
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Everything you need to know about Converleon
-          </p>
         </div>
         
         <Accordion type="single" collapsible className="space-y-4">

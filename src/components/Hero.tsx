@@ -55,7 +55,7 @@ const Hero = () => {
           </div>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed">
-            Batch convert mixed files, merge PDFs from anything, export PDFs page by page, extract audio, and pack/unpack archives — offline, on-device, zero setup.
+            Batch-convert mixed files, merge PDFs from almost anything, split PDFs page by page, extract audio, remove backgrounds, and pack or unpack archives. No uploads, no setup.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -104,15 +104,15 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-primary" />
-              <span>No settings</span>
+              <span>No settings to learn</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-primary" />
-              <span>Native for macOS</span>
+              <span>Native macOS app</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="h-4 w-4 text-primary" />
-              <span>Mixed batch support</span>
+              <span>Handles mixed batches</span>
             </div>
           </div>
         </div>
