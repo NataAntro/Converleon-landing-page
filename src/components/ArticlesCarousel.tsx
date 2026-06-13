@@ -23,8 +23,15 @@ const ArticlesCarousel = () => {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Browse the guides, then jump straight into the steps.
           </p>
-          <Link to="/guides/" className="mt-4 inline-block font-medium text-primary hover:underline">
+          <Link
+            to="/guides/"
+            className={cn(
+              buttonVariants({ variant: "outline" }),
+              "mt-5 glass-card border-border/60 text-primary hover:bg-accent/50",
+            )}
+          >
             View all guides
+            <ArrowUpRight className="h-4 w-4" />
           </Link>
         </div>
 
