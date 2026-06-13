@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="py-12 px-4 border-t border-border/50">
+    <footer className="py-12 pb-[calc(env(safe-area-inset-bottom)+7rem)] md:pb-12 px-4 border-t border-border/50">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
