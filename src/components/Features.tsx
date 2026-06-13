@@ -1,4 +1,6 @@
 import batchConvert from "@/assets/batch-convert.png";
+import removeBgEnhance from "@/assets/removebg-enhance.png";
+import compressMedia from "@/assets/compress-media.png";
 import videoAudio from "@/assets/video-audio.png";
 import mergePdfs from "@/assets/merge-pdfs.png";
 import pdfToImages from "@/assets/pdf-to-images.png";
@@ -18,6 +20,18 @@ const Features = () => {
       title: "Batch Convert Mixed Files",
       description: "Convert hundreds of files in one go — even when the drop contains different types. Pick the final format and Converleon handles the rest.",
       image: batchConvert,
+      reverse: true
+    },
+    {
+      title: "Remove Backgrounds & Enhance Photos",
+      description: "Remove image backgrounds locally and save transparent PNGs. Or improve photos with automatic color, contrast, and red-eye correction.",
+      image: removeBgEnhance,
+      reverse: false
+    },
+    {
+      title: "Compress Images, Video & Audio",
+      description: "Shrink media with simple Smallest, Balanced, and Quality presets. Images keep the right format, video becomes MP4, and audio becomes M4A.",
+      image: compressMedia,
       reverse: true
     },
     {

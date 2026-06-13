@@ -5,7 +5,7 @@ const Benefits = () => {
     {
       icon: <FileStack className="h-8 w-8" />,
       title: "All-in-one multi-tool",
-      description: "Images, Video, Audio, Documents, PDF Tools, Archives — everything in one app"
+      description: "Images, Video, Audio, Documents, PDF Tools, Archives, Compression, and Remove BG"
     },
     {
       icon: <Layers className="h-8 w-8" />,
@@ -20,7 +20,7 @@ const Benefits = () => {
     {
       icon: <FileText className="h-8 w-8" />,
       title: "PDF superpowers",
-      description: "Merge from anything, export page by page to images"
+      description: "Merge mixed batches, export page by page to images"
     },
     {
       icon: <Archive className="h-8 w-8" />,

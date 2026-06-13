@@ -9,26 +9,29 @@ const Formats = () => {
   const formats = [
     {
       category: "Images",
-      input: "JPG/JPEG, PNG, GIF, HEIC, BMP, TIFF/TIF",
+      input: "JPG/JPEG, PNG, GIF, HEIC/HEIF/HIF, WEBP, BMP, TIFF/TIF",
       output: "JPG, PNG, HEIC, PDF, TIFF, BMP",
-      note: null
+      actions: "Remove BG to transparent PNG, Enhance, Compress with Smallest/Balanced/Quality presets",
+      note: "Remove BG works on macOS 14 or later and needs a clear foreground subject."
     },
     {
       category: "Video",
       input: "MOV, MP4, M4V",
-      output: "MOV, MP4, M4V",
+      output: "MOV, MP4, M4V; compressed video saves as optimized MP4",
       audioOutput: "Audio from video: M4A, WAV",
+      actions: "Compress with Smallest/Balanced/Quality presets",
       note: "MP3 export isn't available due to licensing restrictions."
     },
     {
       category: "Audio",
       input: "M4A, AIFF, CAF, WAV, FLAC, MP3",
-      output: "M4A, AIFF, CAF, WAV, FLAC",
+      output: "M4A, AIFF, CAF, WAV, FLAC; compressed audio saves as M4A",
+      actions: "Compress with Smallest/Balanced/Quality presets",
       note: null
     },
     {
       category: "Documents",
-      input: "DOCX, DOC, RTF, TXT",
+      input: "DOCX, DOC, RTF, TXT, HTML, HTM",
       output: "PDF, RTF, TXT",
       note: "DOCX → PDF preserves images and formatting; DOC → PDF may export text-only depending on the system parser."
     },
@@ -36,8 +39,8 @@ const Formats = () => {
       category: "PDF tools",
       input: null,
       output: "Export page by page to PDF/JPG/PNG/HEIC/TIFF (or combined multi-page TIFF)",
-      features: "Merge PDFs from images, documents, and PDFs",
-      note: null
+      features: "Merge PDFs from PDF, images, and documents, including mixed batches",
+      note: "Merge supports PDF, JPG/JPEG, PNG, GIF, HEIC/HEIF/HIF, BMP, WEBP, TIFF/TIF, DOCX, DOC, RTF, TXT, HTML, and HTM. Unsupported files are skipped."
     },
     {
       category: "Archives",

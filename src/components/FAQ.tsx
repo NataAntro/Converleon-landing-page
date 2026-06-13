@@ -20,6 +20,14 @@ const FAQ = () => {
       answer: "MP3 export is not available due to licensing restrictions. However, you can export to M4A, WAV, AIFF, and CAF formats."
     },
     {
+      question: "Does Remove BG upload my images?",
+      answer: "No. Background removal runs locally on your Mac and saves the result as a transparent PNG. It requires macOS 14 or later."
+    },
+    {
+      question: "How does compression work?",
+      answer: "Choose Smallest, Balanced, or Quality. Images, videos, and audio are compressed locally with practical output formats for sharing and storage."
+    },
+    {
       question: "Do you support password-protected archives?",
       answer: "Yes, password-protected ZIP and RAR archives are supported. However, password-protected 7Z archives are not supported at this time."
     },

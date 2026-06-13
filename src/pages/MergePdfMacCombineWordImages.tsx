@@ -58,7 +58,7 @@ const MergePdfMacCombineWordImages = () => {
               one final document you can send right away. The fastest Merge PDF Mac workflow is to drop everything in
               one place and export a single clean file, without converting each item manually first. Converleon lets you
               merge files into one PDF on Mac in seconds while keeping documents on your device. This approach is ideal
-              when you need to combine DOCX, JPG, and PDF for applications, legal packets, or internal reports.
+              when you need to combine documents, images, and PDFs for applications, legal packets, or internal reports.
             </p>
           </header>
 
@@ -74,7 +74,9 @@ const MergePdfMacCombineWordImages = () => {
             <h2 className="text-2xl md:text-3xl font-semibold">What You Need</h2>
             <ul className="list-disc space-y-2 pl-6 text-muted-foreground">
               <li>Converleon for Mac.</li>
-              <li>Mixed files: Word documents (DOCX), images (JPG/PNG), or existing PDFs.</li>
+              <li>
+                Mixed files: PDF, Word documents, RTF/TXT/HTML, or images such as JPG, PNG, HEIC, WEBP, and TIFF.
+              </li>
             </ul>
           </section>
 
@@ -119,7 +121,8 @@ const MergePdfMacCombineWordImages = () => {
               <li className="space-y-3">
                 <h4 className="text-lg font-semibold text-foreground">Done</h4>
                 <p className="leading-relaxed">
-                  The app combines all dropped content into one multipage PDF and saves it to your Mac.
+                  The app combines all supported dropped content into one multipage PDF and saves it to your Mac.
+                  Unsupported files are skipped so the batch can keep running.
                 </p>
               </li>
             </ol>
@@ -135,7 +138,8 @@ const MergePdfMacCombineWordImages = () => {
               </li>
               <li>
                 <span className="font-semibold text-foreground">Formatting loss:</span> Converleon preserves DOCX and
-                image formatting when combining them into the final PDF.
+                image formatting when combining them into the final PDF. DOC files may be handled as text documents
+                with partial formatting loss.
               </li>
             </ul>
           </section>

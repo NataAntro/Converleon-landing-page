@@ -21,7 +21,7 @@ const articles = [
     href: "/merge-pdf-mac-combine-word-images/",
     title: "Merge PDF on Mac: Combine Word, Images & PDF Files",
     description:
-      "Combine DOCX, JPG/PNG, and PDF files into one clean PDF without cloud uploads or manual intermediate conversion.",
+      "Combine PDFs, documents, and images into one clean PDF without cloud uploads or manual intermediate conversion.",
   },
   {
     href: "/extract-audio-from-video-mac-mov-to-wav/",
