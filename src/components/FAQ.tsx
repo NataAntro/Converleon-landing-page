@@ -56,7 +56,7 @@ const FAQ = () => {
   const hiddenCount = faqs.length - MOBILE_INITIAL;
 
   return (
-    <section className="py-16 md:py-24 px-4">
+    <section id="faq" className="py-16 md:py-24 px-4">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">

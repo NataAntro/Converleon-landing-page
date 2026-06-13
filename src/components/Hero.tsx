@@ -127,7 +127,7 @@ const Hero = () => {
                       alt="Converleon app interface showing file conversion workflow"
                       width={1920}
                       height={1200}
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.01]"
+                      className="h-full w-full object-cover animate-ken-burns transition duration-500 group-hover:scale-[1.01]"
                     />
                     <span className="absolute inset-0 bg-gradient-to-t from-background/60 via-background/10 to-transparent transition group-hover:from-background/70" />
                     <span className="absolute inset-0 flex items-center justify-center">

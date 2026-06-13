@@ -10,6 +10,9 @@ import Formats from "@/components/Formats";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
+import AuroraBackground from "@/components/AuroraBackground";
+import ScrollProgress from "@/components/ScrollProgress";
+import FloatingNav from "@/components/FloatingNav";
 import { organizationSchema, Seo, softwareApplicationSchema } from "@/lib/seo";
 
 const HOME_TITLE = "Offline File Converter for Mac | Converleon";
@@ -42,6 +45,9 @@ const Index = () => {
         path="/"
         jsonLd={[organizationSchema, softwareApplicationSchema]}
       />
+      <AuroraBackground />
+      <ScrollProgress />
+      <FloatingNav />
       <Hero />
       <Benefits />
       <ArticlesCarousel />
@@ -52,6 +58,7 @@ const Index = () => {
       <Footer />
       <StickyMobileCTA />
     </div>
+
   );
 };
 

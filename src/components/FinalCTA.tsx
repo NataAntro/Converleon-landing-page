@@ -4,24 +4,24 @@ import { cn } from "@/lib/utils";
 
 const FinalCTA = () => {
   return (
-    <section className="py-24 px-4">
+    <section className="py-12 md:py-20 px-4">
       <div className="max-w-5xl mx-auto">
-        <div className="glass-card rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+        <div className="glass-card rounded-3xl p-6 md:p-12 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-50" />
-          
+
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 flex flex-col gap-2">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 flex flex-col gap-2">
               Drop files. Pick a format. Done.
             </h2>
-            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+            <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-10 max-w-2xl mx-auto">
               The file workflow a lot of Mac users wish came built in.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <Button
                 asChild
                 size="lg"
-                className="text-lg px-8 py-6 bg-primary hover:bg-primary/90"
+                className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 bg-primary hover:bg-primary/90"
               >
                 <a
                   href="https://apps.apple.com/app/converleon/id6751464821"
@@ -32,11 +32,11 @@ const FinalCTA = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <a 
+              <a
                 href="mailto:converleonapp@gmail.com"
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" }),
-                  "text-lg px-8 py-6 glass-card cursor-pointer"
+                  "text-base md:text-lg px-6 md:px-8 py-5 md:py-6 glass-card cursor-pointer"
                 )}
               >
                 <Mail className="mr-2 h-5 w-5" />
