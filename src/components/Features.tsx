@@ -8,10 +8,7 @@ import unpackArchives from "@/assets/unpack-archives.webp";
 import packZip from "@/assets/pack-zip.webp";
 import heroImage from "@/assets/hero-screenshot.webp";
 import Reveal from "@/components/Reveal";
-import BeforeAfter from "@/components/BeforeAfter";
 import { cn } from "@/lib/utils";
-
-type Hotspot = { x: number; y: number; label: string };
 
 type Feature = {
   title: string;
@@ -20,10 +17,6 @@ type Feature = {
   imageWidth: number;
   imageHeight: number;
   tint: "primary" | "accent" | "cyan";
-  visual?: "image" | "beforeAfter";
-  beforeLabel?: string;
-  afterLabel?: string;
-  hotspots?: Hotspot[];
 };
 
 const features: Feature[] = [
@@ -42,11 +35,6 @@ const features: Feature[] = [
     imageWidth: 1920,
     imageHeight: 1200,
     tint: "accent",
-    hotspots: [
-      { x: 18, y: 72, label: "Drop a mixed batch" },
-      { x: 52, y: 38, label: "Pick one final format" },
-      { x: 84, y: 50, label: "Files arrive renamed" },
-    ],
   },
   {
     title: "Compress images, video & audio",
@@ -55,9 +43,6 @@ const features: Feature[] = [
     imageWidth: 2880,
     imageHeight: 1800,
     tint: "cyan",
-    visual: "beforeAfter",
-    beforeLabel: "Original • heavy",
-    afterLabel: "Compressed • light",
   },
   {
     title: "Remove backgrounds & enhance photos",
@@ -66,10 +51,6 @@ const features: Feature[] = [
     imageWidth: 2880,
     imageHeight: 1800,
     tint: "primary",
-    hotspots: [
-      { x: 30, y: 50, label: "Drop a photo" },
-      { x: 70, y: 50, label: "Transparent PNG out" },
-    ],
   },
   {
     title: "Convert video & pull out audio",
@@ -86,10 +67,6 @@ const features: Feature[] = [
     imageWidth: 1920,
     imageHeight: 1200,
     tint: "cyan",
-    hotspots: [
-      { x: 24, y: 70, label: "Mixed sources in" },
-      { x: 76, y: 45, label: "Single PDF out" },
-    ],
   },
   {
     title: "Split PDFs to images, page by page",
@@ -172,37 +149,15 @@ const Features = () => {
                     glowFor(feature.tint)
                   )}
                 >
-                  {feature.visual === "beforeAfter" ? (
-                    <BeforeAfter
-                      src={feature.image}
-                      alt={feature.title}
-                      imageWidth={feature.imageWidth}
-                      imageHeight={feature.imageHeight}
-                      beforeLabel={feature.beforeLabel}
-                      afterLabel={feature.afterLabel}
-                    />
-                  ) : (
-                    <div className="relative">
-                      <img
-                        src={feature.image}
-                        alt={feature.title}
-                        width={feature.imageWidth}
-                        height={feature.imageHeight}
-                        className="w-full h-auto rounded-2xl"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      {feature.hotspots?.map((h, i) => (
-                        <span
-                          key={i}
-                          className="hotspot"
-                          style={{ left: `${h.x}%`, top: `${h.y}%` }}
-                          aria-label={h.label}
-                          title={h.label}
-                        />
-                      ))}
-                    </div>
-                  )}
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    width={feature.imageWidth}
+                    height={feature.imageHeight}
+                    className="w-full h-auto rounded-2xl"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </div>
             </Reveal>

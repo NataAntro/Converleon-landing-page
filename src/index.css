@@ -192,24 +192,6 @@ All colors MUST be HSL.
     transform: translateY(0);
   }
 
-  .hotspot {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    border-radius: 9999px;
-    background: hsl(310 90% 70%);
-    box-shadow: 0 0 0 4px hsl(310 90% 70% / 0.25);
-  }
-
-  .hotspot::before {
-    content: "";
-    position: absolute;
-    inset: -6px;
-    border-radius: 9999px;
-    background: hsl(310 90% 70% / 0.55);
-    animation: hotspot-pulse 1.8s ease-out infinite;
-  }
-
   .glow-primary {
     box-shadow: 0 30px 80px -20px hsl(290 80% 55% / 0.45);
   }
@@ -250,18 +232,12 @@ All colors MUST be HSL.
   80% { transform: translate(-8%, -5%) scale(1.1); }
 }
 
-@keyframes hotspot-pulse {
-  0% { transform: scale(0.6); opacity: 0.8; }
-  100% { transform: scale(2.4); opacity: 0; }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .animate-float-slow,
   .animate-ken-burns,
   .aurora::before,
   .aurora::after,
-  .aurora > span,
-  .hotspot::before {
+  .aurora > span {
     animation: none !important;
   }
 
