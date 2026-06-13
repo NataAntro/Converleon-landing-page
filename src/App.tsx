@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation, useNavigationType } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Guides from "./pages/Guides";
@@ -6,8 +7,21 @@ import ArticlePage from "./pages/ArticlePage";
 import { articles } from "./data/articleCatalog";
 import { legacyArticleSlugAliases } from "./data/articles";
 
+const ScrollToTop = () => {
+  const { hash, pathname } = useLocation();
+  const navigationType = useNavigationType();
+
+  useEffect(() => {
+    if (hash || navigationType === "POP") return;
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [hash, navigationType, pathname]);
+
+  return null;
+};
+
 const App = () => (
   <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/guides" element={<Guides />} />
