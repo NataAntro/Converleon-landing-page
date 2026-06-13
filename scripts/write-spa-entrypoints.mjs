@@ -21,6 +21,14 @@ const CONTENT_SECURITY_POLICY = [
 ].join("; ");
 const STATIC_FALLBACK_GUARD = `<style data-converleon-seo="static-fallback-guard">#root > .seo-static-page{visibility:hidden}</style>
 <noscript><style>#root > .seo-static-page{visibility:visible}</style></noscript>`;
+const CATEGORY_ORDER = [
+  "Images",
+  "Audio & Video",
+  "PDFs & Documents",
+  "Media Compression",
+  "Archives",
+  "Privacy & Offline",
+];
 
 const legacyAliases = {
   "heic-to-png-mac-batch-convert": "heic-to-png-mac",
@@ -317,7 +325,11 @@ async function main() {
     await writeRoute(`blog/${article.slug}`, articleHtml);
   }
 
-  const categories = [...new Set(articles.map((article) => article.category))];
+  const articleCategories = [...new Set(articles.map((article) => article.category))];
+  const categories = [
+    ...CATEGORY_ORDER.filter((category) => articleCategories.includes(category)),
+    ...articleCategories.filter((category) => !CATEGORY_ORDER.includes(category)),
+  ];
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",

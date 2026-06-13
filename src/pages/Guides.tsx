@@ -8,8 +8,21 @@ const GUIDES_TITLE = "Mac File Conversion Guides | Converleon";
 const GUIDES_DESCRIPTION =
   "Practical guides for converting images, audio, video, documents, PDFs, and archives offline on Mac.";
 
+const CATEGORY_ORDER = [
+  "Images",
+  "Audio & Video",
+  "PDFs & Documents",
+  "Media Compression",
+  "Archives",
+  "Privacy & Offline",
+] as const;
+
 const Guides = () => {
-  const categories = [...new Set(articles.map((article) => article.category))];
+  const articleCategories = [...new Set(articles.map((article) => article.category))];
+  const categories = [
+    ...CATEGORY_ORDER.filter((category) => articleCategories.includes(category)),
+    ...articleCategories.filter((category) => !CATEGORY_ORDER.includes(category as (typeof CATEGORY_ORDER)[number])),
+  ];
 
   return (
     <div className="min-h-screen">

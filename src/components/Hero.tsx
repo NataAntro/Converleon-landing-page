@@ -140,7 +140,7 @@ const Hero = () => {
               className="w-full h-auto rounded-2xl"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent pointer-events-none rounded-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/10 to-transparent pointer-events-none rounded-3xl" />
         </div>
       </div>
     </section>
