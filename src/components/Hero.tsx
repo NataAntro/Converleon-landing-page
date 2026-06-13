@@ -135,11 +135,6 @@ const Hero = () => {
                         <Play className="h-8 w-8 translate-x-0.5 fill-primary-foreground md:h-10 md:w-10" />
                       </span>
                     </span>
-                    <span className="absolute inset-x-4 bottom-4 flex justify-center md:bottom-6">
-                      <span className="rounded-full border border-white/15 bg-background/70 px-5 py-2 text-sm font-semibold text-foreground shadow-lg backdrop-blur md:text-base">
-                        Play the demo
-                      </span>
-                    </span>
                   </AspectRatio>
                 </button>
               )}
