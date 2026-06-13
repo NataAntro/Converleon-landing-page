@@ -7,8 +7,8 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { ArrowRight, Check, MousePointerClick, Sparkles, X } from "lucide-react";
-import heroImage from "@/assets/hero-screenshot.png";
-import appIcon from "@/assets/app-icon.png";
+import heroImage from "@/assets/hero-screenshot.webp";
+import appIcon from "@/assets/app-icon.webp";
 
 const Hero = () => {
   return (

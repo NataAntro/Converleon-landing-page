@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import ArticleBackLink from "@/components/ArticleBackLink";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { buttonVariants } from "@/components/ui/button";
-import articleImage from "@/assets/articles/article1.png";
+import articleImage from "@/assets/articles/article1.webp";
 import { cn } from "@/lib/utils";
 
 const PAGE_TITLE = "HEIC to PNG on Mac: Batch Convert iPhone Photos Fast";

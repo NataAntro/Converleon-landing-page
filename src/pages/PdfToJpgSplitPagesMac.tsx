@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import ArticleBackLink from "@/components/ArticleBackLink";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { buttonVariants } from "@/components/ui/button";
-import articleImage from "@/assets/articles/article_pdf_export.png";
+import articleImage from "@/assets/articles/article_pdf_export.webp";
 import { cn } from "@/lib/utils";
 
 const PAGE_TITLE = "PDF to Image on Mac: Export Pages to JPG, PNG & Split PDFs";

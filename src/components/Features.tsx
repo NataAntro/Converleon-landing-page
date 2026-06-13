@@ -1,12 +1,12 @@
-import batchConvert from "@/assets/batch-convert.png";
-import removeBgEnhance from "@/assets/removebg-enhance.png";
-import compressMedia from "@/assets/compress-media.png";
-import videoAudio from "@/assets/video-audio.png";
-import mergePdfs from "@/assets/merge-pdfs.png";
-import pdfToImages from "@/assets/pdf-to-images.png";
-import unpackArchives from "@/assets/unpack-archives.png";
-import packZip from "@/assets/pack-zip.png";
-import heroImage from "@/assets/hero-screenshot.png";
+import batchConvert from "@/assets/batch-convert.webp";
+import removeBgEnhance from "@/assets/removebg-enhance.webp";
+import compressMedia from "@/assets/compress-media.webp";
+import videoAudio from "@/assets/video-audio.webp";
+import mergePdfs from "@/assets/merge-pdfs.webp";
+import pdfToImages from "@/assets/pdf-to-images.webp";
+import unpackArchives from "@/assets/unpack-archives.webp";
+import packZip from "@/assets/pack-zip.webp";
+import heroImage from "@/assets/hero-screenshot.webp";
 
 const Features = () => {
   const features = [
@@ -23,16 +23,16 @@ const Features = () => {
       reverse: true
     },
     {
-      title: "Remove Backgrounds & Enhance Photos",
-      description: "Remove image backgrounds locally and save transparent PNGs. Or improve photos with automatic color, contrast, and red-eye correction.",
-      image: removeBgEnhance,
-      reverse: false
-    },
-    {
       title: "Compress Images, Video & Audio",
       description: "Shrink media with simple Smallest, Balanced, and Quality presets. Images keep the right format, video becomes MP4, and audio becomes M4A.",
       image: compressMedia,
       reverse: true
+    },
+    {
+      title: "Remove Backgrounds & Enhance Photos",
+      description: "Remove image backgrounds locally and save transparent PNGs. Or improve photos with automatic color, contrast, and red-eye correction.",
+      image: removeBgEnhance,
+      reverse: false
     },
     {
       title: "Convert Video & Extract Audio",

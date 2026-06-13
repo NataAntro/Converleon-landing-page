@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import ArticleBackLink from "@/components/ArticleBackLink";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { buttonVariants } from "@/components/ui/button";
-import articleImage from "@/assets/articles/article2.png";
+import articleImage from "@/assets/articles/article2.webp";
 import { cn } from "@/lib/utils";
 
 const PAGE_TITLE = "Merge PDF on Mac: Combine Word, Images & PDF Files";

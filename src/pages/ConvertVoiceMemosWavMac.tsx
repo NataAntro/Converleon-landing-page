@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import ArticleBackLink from "@/components/ArticleBackLink";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { buttonVariants } from "@/components/ui/button";
-import articleImage from "@/assets/articles/article_voice_memos.png";
+import articleImage from "@/assets/articles/article_voice_memos.webp";
 import { cn } from "@/lib/utils";
 
 const PAGE_TITLE = "Voice Memos to WAV on Mac: Batch Convert iPhone M4A";

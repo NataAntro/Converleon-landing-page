@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import ArticleBackLink from "@/components/ArticleBackLink";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { buttonVariants } from "@/components/ui/button";
-import articleImage from "@/assets/articles/article_rar_7z.png";
+import articleImage from "@/assets/articles/article_rar_7z.webp";
 import { cn } from "@/lib/utils";
 
 const PAGE_TITLE = "Open RAR & 7Z Files on Mac: Unpack or Convert to ZIP Fast";

@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import ArticleBackLink from "@/components/ArticleBackLink";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { buttonVariants } from "@/components/ui/button";
-import articleImage from "@/assets/articles/article_flac.png";
+import articleImage from "@/assets/articles/article_flac.webp";
 import { cn } from "@/lib/utils";
 
 const PAGE_TITLE = "FLAC to M4A & WAV on Mac: Batch Convert Lossless Audio";

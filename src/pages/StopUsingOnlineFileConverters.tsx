@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import ArticleBackLink from "@/components/ArticleBackLink";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { buttonVariants } from "@/components/ui/button";
-import articleImage from "@/assets/articles/article4.png";
+import articleImage from "@/assets/articles/article4.webp";
 import { cn } from "@/lib/utils";
 
 const PAGE_TITLE = "Why You Should Stop Using Online File Converters";

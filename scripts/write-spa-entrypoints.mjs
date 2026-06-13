@@ -2,6 +2,18 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const ARTICLE_SLUGS = [
+  "blog/heic-to-png-mac",
+  "blog/merge-pdf-mac",
+  "blog/extract-audio-from-video-mac",
+  "blog/stop-using-online-converters",
+  "blog/open-rar-7z-mac",
+  "blog/flac-to-m4a-wav-mac",
+  "blog/pdf-to-jpg-png-mac",
+  "blog/voice-memos-to-wav-mac",
+  "blog/remove-background-mac",
+  "blog/compress-files-mac",
+  "blog/enhance-photos-mac",
+  "blog/webp-heif-converter-mac",
   "heic-to-png-mac-batch-convert",
   "merge-pdf-mac-combine-word-images",
   "extract-audio-from-video-mac-mov-to-wav",
