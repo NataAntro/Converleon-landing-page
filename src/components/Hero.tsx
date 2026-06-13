@@ -8,7 +8,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { ArrowRight, Check, MousePointerClick, Sparkles, X } from "lucide-react";
+import { ArrowRight, Check, MousePointerClick, Play, Sparkles, X } from "lucide-react";
 import heroImage from "@/assets/hero-screenshot.webp";
 import appIcon from "@/assets/app-icon.webp";
 
@@ -72,42 +72,6 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 glass-card">
-                  See how it works
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-4xl glass-card border-0 [&>button]:hidden">
-                <DialogTitle className="sr-only">How Converleon works</DialogTitle>
-                <DialogDescription className="sr-only">
-                  A short product video showing the Converleon drag-and-drop conversion workflow.
-                </DialogDescription>
-                <div className="flex justify-end">
-                  <DialogClose asChild>
-                    <Button
-                      size="icon"
-                      variant="outline"
-                      className="h-10 w-10 rounded-full border bg-background/80 shadow-md hover:bg-accent"
-                    >
-                      <X className="h-4 w-4" />
-                      <span className="sr-only">Close video</span>
-                    </Button>
-                  </DialogClose>
-                </div>
-                <AspectRatio ratio={16 / 9}>
-                  <iframe
-                    src="https://www.youtube-nocookie.com/embed/aXsZbqFQUNw"
-                    title="How Converleon works"
-                    className="h-full w-full rounded-lg border"
-                    allow="autoplay; encrypted-media; picture-in-picture; web-share"
-                    loading="lazy"
-                    sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"
-                    allowFullScreen
-                  />
-                </AspectRatio>
-              </DialogContent>
-            </Dialog>
           </div>
           
           <div className="flex flex-wrap gap-6 justify-center text-sm text-muted-foreground">
@@ -130,18 +94,76 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="relative max-w-5xl mx-auto animate-scale-in" style={{ animationDelay: "0.2s" }}>
-          <div className="glass-card rounded-3xl p-4 shadow-2xl">
-            <img 
-              src={heroImage} 
-              alt="Converleon app interface showing file conversion workflow" 
-              width={1920}
-              height={1200}
-              className="w-full h-auto rounded-2xl"
-            />
+        <Dialog>
+          <div className="relative max-w-5xl mx-auto animate-scale-in" style={{ animationDelay: "0.2s" }}>
+            <div className="mb-4 text-center md:mb-6">
+              <h3 className="text-2xl font-bold md:text-4xl">Watch Converleon in action</h3>
+              <p className="mx-auto mt-2 max-w-2xl text-sm text-muted-foreground md:text-base">
+                A quick look at the drop, choose, convert workflow.
+              </p>
+            </div>
+            <DialogTrigger asChild>
+              <button
+                type="button"
+                className="group relative block w-full rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                aria-label="Play the Converleon product demo"
+              >
+                <span className="glass-card block rounded-3xl p-3 shadow-2xl md:p-4">
+                  <span className="relative block overflow-hidden rounded-2xl">
+                    <img
+                      src={heroImage}
+                      alt="Converleon app interface showing file conversion workflow"
+                      width={1920}
+                      height={1200}
+                      className="w-full h-auto transition duration-500 group-hover:scale-[1.01]"
+                    />
+                    <span className="absolute inset-0 bg-gradient-to-t from-background/60 via-background/10 to-transparent transition group-hover:from-background/70" />
+                    <span className="absolute inset-0 flex items-center justify-center">
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full border border-white/30 bg-primary/90 text-primary-foreground shadow-2xl shadow-primary/30 transition group-hover:scale-105 group-hover:bg-primary md:h-24 md:w-24">
+                        <Play className="h-8 w-8 translate-x-0.5 fill-primary-foreground md:h-10 md:w-10" />
+                      </span>
+                    </span>
+                    <span className="absolute inset-x-4 bottom-4 flex justify-center md:bottom-6">
+                      <span className="rounded-full border border-white/15 bg-background/70 px-5 py-2 text-sm font-semibold text-foreground shadow-lg backdrop-blur md:text-base">
+                        Play the demo
+                      </span>
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </DialogTrigger>
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/10 to-transparent pointer-events-none rounded-3xl" />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-background/10 to-transparent pointer-events-none rounded-3xl" />
-        </div>
+          <DialogContent className="max-w-4xl glass-card border-0 [&>button]:hidden">
+            <DialogTitle className="sr-only">How Converleon works</DialogTitle>
+            <DialogDescription className="sr-only">
+              A short product video showing the Converleon drag-and-drop conversion workflow.
+            </DialogDescription>
+            <div className="flex justify-end">
+              <DialogClose asChild>
+                <Button
+                  size="icon"
+                  variant="outline"
+                  className="h-10 w-10 rounded-full border bg-background/80 shadow-md hover:bg-accent"
+                >
+                  <X className="h-4 w-4" />
+                  <span className="sr-only">Close video</span>
+                </Button>
+              </DialogClose>
+            </div>
+            <AspectRatio ratio={16 / 9}>
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/aXsZbqFQUNw"
+                title="How Converleon works"
+                className="h-full w-full rounded-lg border"
+                allow="autoplay; encrypted-media; picture-in-picture; web-share"
+                loading="lazy"
+                sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"
+                allowFullScreen
+              />
+            </AspectRatio>
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   );
