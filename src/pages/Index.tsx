@@ -9,6 +9,7 @@ import FinalCTA from "@/components/FinalCTA";
 import Formats from "@/components/Formats";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 import { organizationSchema, Seo, softwareApplicationSchema } from "@/lib/seo";
 
 const HOME_TITLE = "Offline File Converter for Mac | Converleon";
@@ -49,6 +50,7 @@ const Index = () => {
       <Formats />
       <FAQ />
       <Footer />
+      <StickyMobileCTA />
     </div>
   );
 };

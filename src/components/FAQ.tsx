@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -6,6 +7,8 @@ import {
 } from "@/components/ui/accordion";
 
 const FAQ = () => {
+  const [showAllMobile, setShowAllMobile] = useState(false);
+
   const faqs = [
     {
       question: "Does Converleon upload my files?",
@@ -49,23 +52,32 @@ const FAQ = () => {
     }
   ];
 
+  const MOBILE_INITIAL = 4;
+  const hiddenCount = faqs.length - MOBILE_INITIAL;
+
   return (
-    <section className="py-24 px-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
+    <section className="py-16 md:py-24 px-4">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Common questions
           </h2>
         </div>
-        
-        <Accordion type="single" collapsible className="space-y-4">
+
+        <Accordion
+          type="single"
+          collapsible
+          className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4"
+        >
           {faqs.map((faq, index) => (
-            <AccordionItem 
-              key={index} 
+            <AccordionItem
+              key={index}
               value={`faq-${index}`}
-              className="glass-card rounded-2xl px-6 border-0"
+              className={`glass-card rounded-2xl px-6 border-0 ${
+                !showAllMobile && index >= MOBILE_INITIAL ? "hidden md:block" : ""
+              }`}
             >
-              <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6 text-left">
+              <AccordionTrigger className="text-base md:text-lg font-semibold hover:no-underline py-5 md:py-6 text-left">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-6">
@@ -74,6 +86,18 @@ const FAQ = () => {
             </AccordionItem>
           ))}
         </Accordion>
+
+        {!showAllMobile && hiddenCount > 0 && (
+          <div className="mt-6 flex justify-center md:hidden">
+            <button
+              type="button"
+              onClick={() => setShowAllMobile(true)}
+              className="rounded-full border border-white/15 bg-background/50 px-5 py-2 text-sm font-semibold text-foreground backdrop-blur transition hover:bg-background/70"
+            >
+              Show {hiddenCount} more
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

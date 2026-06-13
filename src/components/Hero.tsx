@@ -40,7 +40,7 @@ const Hero = () => {
           </h2>
         </div>
           
-          <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mb-5 md:mb-6 text-base md:text-xl font-semibold text-foreground/90">
+          <div className="hidden md:flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mb-5 md:mb-6 text-base md:text-xl font-semibold text-foreground/90">
             <div className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-background/25 px-4 py-2 w-full max-w-xs md:w-auto md:max-w-none backdrop-blur">
               <Sparkles className="h-4 w-4 text-primary/80" />
               <span>One Drop</span>
@@ -58,9 +58,12 @@ const Hero = () => {
           </div>
           
           <p className="text-lg md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-6 md:mb-8 leading-relaxed">
-            Batch-convert mixed files, merge PDFs from almost anything, split PDFs page by page, extract audio, remove backgrounds, and pack or unpack archives.
-            <br />
-            No uploads, no setup.
+            <span className="md:hidden">Convert, merge, split, compress — offline on your Mac.</span>
+            <span className="hidden md:inline">
+              Batch-convert mixed files, merge PDFs from almost anything, split PDFs page by page, extract audio, remove backgrounds, and pack or unpack archives.
+              <br />
+              No uploads, no setup.
+            </span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">

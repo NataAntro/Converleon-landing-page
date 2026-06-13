@@ -76,24 +76,24 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-24 px-4">
-      <div className="max-w-7xl mx-auto space-y-32">
+    <section className="py-12 md:py-24 px-4">
+      <div className="max-w-7xl mx-auto space-y-16 md:space-y-24 lg:space-y-32">
         {features.map((feature, index) => (
-          <div 
+          <div
             key={index}
-            className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center`}
+            className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-6 lg:gap-12 items-center`}
           >
-            <div className="flex-1 space-y-6">
-              <h3 className="text-3xl md:text-4xl font-bold whitespace-pre-line">
+            <div className="flex-1 space-y-3 lg:space-y-6">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold whitespace-pre-line">
                 {feature.title}
               </h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base lg:text-lg text-muted-foreground leading-relaxed">
                 {feature.description}
               </p>
             </div>
-            
-            <div className="flex-1">
-              <div className="glass-card rounded-3xl p-4 shadow-2xl">
+
+            <div className="flex-1 w-full">
+              <div className="glass-card rounded-2xl lg:rounded-3xl p-2 lg:p-4 shadow-2xl">
                 <img 
                   src={feature.image} 
                   alt={feature.title}
