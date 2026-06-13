@@ -7,6 +7,20 @@ const DEFAULT_IMAGE = `${SITE_URL}/og-image.webp`;
 const rootDir = process.cwd();
 const distDir = path.resolve(rootDir, "dist");
 const contentDir = path.resolve(rootDir, "src/content/articles");
+const CONTENT_SECURITY_POLICY = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "script-src 'self' https://www.googletagmanager.com",
+  "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net",
+  "img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "font-src 'self' https://fonts.gstatic.com",
+  "frame-src https://www.youtube-nocookie.com",
+  "upgrade-insecure-requests",
+].join("; ");
+const STATIC_FALLBACK_GUARD = `<style data-converleon-seo="static-fallback-guard">#root > .seo-static-page{visibility:hidden}</style>
+<noscript><style>#root > .seo-static-page{visibility:visible}</style></noscript>`;
 
 const legacyAliases = {
   "heic-to-png-mac-batch-convert": "heic-to-png-mac",
@@ -172,6 +186,20 @@ function replaceMeta(html, selectorPattern, replacement) {
   return html.match(selectorPattern) ? html.replace(selectorPattern, replacement) : html.replace("</head>", `${replacement}\n</head>`);
 }
 
+function withSecurityHead(html) {
+  return html
+    .replace(/<meta http-equiv="Content-Security-Policy"[^>]*>\n?/g, "")
+    .replace(/<meta name="referrer"[^>]*>\n?/g, "")
+    .replace(/<style data-converleon-seo="static-fallback-guard">[\s\S]*?<\/style>\n?<noscript>[\s\S]*?<\/noscript>\n?/g, "")
+    .replace(
+      "</head>",
+      `<meta http-equiv="Content-Security-Policy" content="${escapeHtml(CONTENT_SECURITY_POLICY)}">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+${STATIC_FALLBACK_GUARD}
+</head>`,
+    );
+}
+
 function withHead(html, { title, description, canonical, image = DEFAULT_IMAGE, type = "website", robots = "index, follow, max-image-preview:large", schemas = [] }) {
   let output = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(title)}</title>`);
   output = replaceMeta(output, /<meta name="description"[^>]*>/, `<meta name="description" content="${escapeHtml(description)}">`);
@@ -191,7 +219,7 @@ function withHead(html, { title, description, canonical, image = DEFAULT_IMAGE, 
     .map((schema) => `<script type="application/ld+json" data-converleon-seo="json-ld">${escapeJson(schema)}</script>`)
     .join("\n");
 
-  return output.replace("</head>", `${jsonLd}\n</head>`);
+  return withSecurityHead(output.replace("</head>", `${jsonLd}\n</head>`));
 }
 
 function withStaticRoot(html, content) {

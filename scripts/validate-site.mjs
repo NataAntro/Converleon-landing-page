@@ -44,6 +44,8 @@ if (!existsSync(path.join(distDir, "index.html"))) {
     const html = readFileSync(filePath, "utf8");
     const isRedirect = html.includes('content="noindex, follow"') && html.includes("window.location.replace");
     const is404 = filePath.endsWith(`${path.sep}404.html`);
+    const isStandalonePolicy = filePath.endsWith(`${path.sep}privacy-policy.html`);
+    const needsSecurityMeta = !isRedirect && !is404 && !isStandalonePolicy;
     const title = html.match(/<title>([^<]+)<\/title>/)?.[1];
     const canonical = html.match(/<link rel="canonical" href="([^"]+)">/)?.[1];
 
@@ -53,6 +55,15 @@ if (!existsSync(path.join(distDir, "index.html"))) {
     }
     if (!isRedirect && !is404 && !canonical) {
       fail(`${filePath} has no canonical URL.`);
+    }
+    if (needsSecurityMeta && !/<meta http-equiv="Content-Security-Policy" content="[^"]+">/.test(html)) {
+      fail(`${filePath} has no Content-Security-Policy meta tag.`);
+    }
+    if (needsSecurityMeta && !/<meta name="referrer" content="strict-origin-when-cross-origin">/.test(html)) {
+      fail(`${filePath} has no strict referrer policy meta tag.`);
+    }
+    if (needsSecurityMeta && html.includes('class="seo-static-page"') && !html.includes('data-converleon-seo="static-fallback-guard"')) {
+      fail(`${filePath} has visible SEO fallback content without the static fallback guard.`);
     }
 
     if (!isRedirect && !is404 && title && canonical) {

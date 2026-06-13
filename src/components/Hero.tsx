@@ -6,6 +6,7 @@ import {
   DialogTrigger,
   DialogClose,
   DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { ArrowRight, Check, MousePointerClick, Sparkles, X } from "lucide-react";
 import heroImage from "@/assets/hero-screenshot.webp";
@@ -13,12 +14,12 @@ import appIcon from "@/assets/app-icon.webp";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-4 py-10 md:py-20 overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-50" />
       
       <div className="relative z-10 max-w-7xl mx-auto">
-      <div className="text-center mb-12 animate-fade-in">
-        <div className="relative mb-12">
+      <div className="text-center mb-8 md:mb-12 animate-fade-in">
+        <div className="relative mb-8 md:mb-12">
           <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold leading-tight relative z-10">
             <span className="gradient-text">Converleon</span>
             <span className="sr-only"> — Offline File Converter for Mac</span>
@@ -26,13 +27,13 @@ const Hero = () => {
           <div className="absolute inset-0 blur-3xl opacity-30 bg-gradient-to-r from-primary via-accent to-primary animate-pulse" />
         </div>
         
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mb-8">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-5 md:gap-8 mb-6 md:mb-8">
           <img 
             src={appIcon} 
             alt="Converleon app icon" 
             width={1024}
             height={1024}
-            className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-3xl shadow-2xl animate-scale-in"
+            className="w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-3xl shadow-2xl animate-scale-in"
           />
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-center md:text-left">
             One app for every
@@ -41,24 +42,24 @@ const Hero = () => {
           </h2>
         </div>
           
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-6 text-xl md:text-3xl font-semibold">
-            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2 w-full md:w-auto justify-center">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 mb-5 md:mb-6 text-lg md:text-3xl font-semibold">
+            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2 w-full max-w-sm md:w-auto md:max-w-none justify-center">
               <Sparkles className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               <span>One Drop</span>
             </div>
             <ArrowRight className="h-6 w-6 md:h-8 md:w-8 text-primary rotate-90 md:rotate-0" />
-            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2 w-full md:w-auto justify-center">
+            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2 w-full max-w-sm md:w-auto md:max-w-none justify-center">
               <MousePointerClick className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               <span>One Tap</span>
             </div>
             <ArrowRight className="h-6 w-6 md:h-8 md:w-8 text-primary rotate-90 md:rotate-0" />
-            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2 w-full md:w-auto justify-center">
+            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2 w-full max-w-sm md:w-auto md:max-w-none justify-center">
               <Check className="h-5 w-5 md:h-6 md:w-6 text-primary" />
               <span>Done</span>
             </div>
           </div>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-6 md:mb-8 leading-relaxed">
             Batch-convert mixed files, merge PDFs from almost anything, split PDFs page by page, extract audio, remove backgrounds, and pack or unpack archives.
             <br />
             No uploads, no setup.
@@ -66,7 +67,7 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Button asChild size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90">
-              <a href="https://apps.apple.com/app/converleon/id6751464821" target="_blank" rel="noreferrer">
+              <a href="https://apps.apple.com/app/converleon/id6751464821" target="_blank" rel="noopener noreferrer">
                 Download on the Mac App Store
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
@@ -79,6 +80,9 @@ const Hero = () => {
               </DialogTrigger>
               <DialogContent className="max-w-4xl glass-card border-0 [&>button]:hidden">
                 <DialogTitle className="sr-only">How Converleon works</DialogTitle>
+                <DialogDescription className="sr-only">
+                  A short product video showing the Converleon drag-and-drop conversion workflow.
+                </DialogDescription>
                 <div className="flex justify-end">
                   <DialogClose asChild>
                     <Button
@@ -93,11 +97,12 @@ const Hero = () => {
                 </div>
                 <AspectRatio ratio={16 / 9}>
                   <iframe
-                    src="https://www.youtube.com/embed/aXsZbqFQUNw"
+                    src="https://www.youtube-nocookie.com/embed/aXsZbqFQUNw"
                     title="How Converleon works"
                     className="h-full w-full rounded-lg border"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allow="autoplay; encrypted-media; picture-in-picture; web-share"
                     loading="lazy"
+                    sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"
                     allowFullScreen
                   />
                 </AspectRatio>
