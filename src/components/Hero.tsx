@@ -28,6 +28,8 @@ const Hero = () => {
           <img 
             src={appIcon} 
             alt="Converleon app icon" 
+            width={1024}
+            height={1024}
             className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-3xl shadow-2xl animate-scale-in"
           />
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-center md:text-left">
@@ -122,6 +124,8 @@ const Hero = () => {
             <img 
               src={heroImage} 
               alt="Converleon app interface showing file conversion workflow" 
+              width={1920}
+              height={1200}
               className="w-full h-auto rounded-2xl"
             />
           </div>

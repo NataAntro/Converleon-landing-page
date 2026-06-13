@@ -13,47 +13,65 @@ const Features = () => {
     {
       title: "Every file type. The same two steps.",
       description: "One workflow covers images, video, audio, documents, PDFs, and archives.",
-      image: heroImage
+      image: heroImage,
+      imageWidth: 1920,
+      imageHeight: 1200
     },
     {
       title: "Batch-convert mixed files",
       description: "Convert hundreds of files in a single pass, even when the drop holds several different types. Pick the final format and Converleon sorts out the rest.",
-      image: batchConvert
+      image: batchConvert,
+      imageWidth: 1920,
+      imageHeight: 1200
     },
     {
       title: "Compress images, video & audio",
       description: "Shrink media with three plain-language presets — Smallest, Balanced, Quality. Images keep the right format, video lands as MP4, audio as M4A.",
-      image: compressMedia
+      image: compressMedia,
+      imageWidth: 2880,
+      imageHeight: 1800
     },
     {
       title: "Remove backgrounds & enhance photos",
       description: "Cut out an image background and save it as a transparent PNG, or clean up a photo with automatic color, contrast, and red-eye correction.",
-      image: removeBgEnhance
+      image: removeBgEnhance,
+      imageWidth: 2880,
+      imageHeight: 1800
     },
     {
       title: "Convert video & pull out audio",
       description: "Convert MOV, MP4, and M4V, or extract just the audio track to M4A or WAV.",
-      image: videoAudio
+      image: videoAudio,
+      imageWidth: 1920,
+      imageHeight: 1200
     },
     {
       title: "Merge PDFs from almost anything",
       description: "Drop images, documents, and PDFs together, choose Merge PDFs, and get one clean file. Unsupported items are skipped automatically.",
-      image: mergePdfs
+      image: mergePdfs,
+      imageWidth: 1920,
+      imageHeight: 1200
     },
     {
       title: "Split PDFs to images, page by page",
       description: "Export every page of a PDF to a single PDF, JPG, PNG, HEIC, or TIFF in two steps.",
-      image: pdfToImages
+      image: pdfToImages,
+      imageWidth: 2880,
+      imageHeight: 1800
     },
     {
       title: "Unpack & repack archives",
       description: "Open most archive formats, extract to a folder, or repack to ZIP. Password-protected ZIP and RAR files are supported.",
-      image: unpackArchives
+      image: unpackArchives,
+      imageWidth: 1920,
+      imageHeight: 1200
     },
     {
       title: "Pack anything into a ZIP",
       description: "Bundle any files into a ZIP in one step, with your folder structure intact.",
-      image: packZip
+      image: packZip,
+      imageWidth: 1920,
+      imageHeight: 1200
     }
   ];
 
@@ -79,6 +97,8 @@ const Features = () => {
                 <img 
                   src={feature.image} 
                   alt={feature.title}
+                  width={feature.imageWidth}
+                  height={feature.imageHeight}
                   className="w-full h-auto rounded-2xl"
                 />
               </div>

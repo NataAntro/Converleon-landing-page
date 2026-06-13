@@ -18,6 +18,8 @@ type ArticleMeta = {
 
 type Article = ArticleMeta & {
   image: string;
+  imageWidth: number;
+  imageHeight: number;
   blocks: ArticleBlock[];
 };
 
@@ -189,11 +191,13 @@ function parseBlocks(body: string): ArticleBlock[] {
 }
 
 function parseArticles() {
-  return articleSources.map(({ markdown, image }) => {
+  return articleSources.map(({ markdown, image, imageWidth, imageHeight }) => {
     const { meta, body } = parseFrontmatter(markdown);
     return {
       ...meta,
       image,
+      imageWidth,
+      imageHeight,
       blocks: parseBlocks(body),
     };
   });
@@ -257,7 +261,17 @@ function renderInline(text: string): ReactNode[] {
   return nodes;
 }
 
-function ArticleContentBlock({ block, image }: { block: ArticleBlock; image: string }) {
+function ArticleContentBlock({
+  block,
+  image,
+  imageWidth,
+  imageHeight,
+}: {
+  block: ArticleBlock;
+  image: string;
+  imageWidth: number;
+  imageHeight: number;
+}) {
   switch (block.type) {
     case "heading":
       if (block.level === 1) return null;
@@ -290,7 +304,14 @@ function ArticleContentBlock({ block, image }: { block: ArticleBlock; image: str
     case "figure":
       return (
         <figure className="space-y-2">
-          <img src={image} alt={block.alt} className="w-full rounded-2xl border border-border/60" loading="lazy" />
+          <img
+            src={image}
+            alt={block.alt}
+            width={imageWidth}
+            height={imageHeight}
+            className="w-full rounded-2xl border border-border/60"
+            loading="lazy"
+          />
           <figcaption className="text-sm text-muted-foreground">{renderInline(block.caption)}</figcaption>
         </figure>
       );
@@ -411,7 +432,13 @@ const ArticlePage = ({ slug: explicitSlug }: { slug?: string }) => {
           </header>
 
           {content.bodyBlocks.map((block, index) => (
-            <ArticleContentBlock key={`${block.type}-${index}`} block={block} image={article.image} />
+            <ArticleContentBlock
+              key={`${block.type}-${index}`}
+              block={block}
+              image={article.image}
+              imageWidth={article.imageWidth}
+              imageHeight={article.imageHeight}
+            />
           ))}
         </article>
       </main>

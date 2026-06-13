@@ -26,21 +26,23 @@ import batchConvertImage from "@/assets/batch-convert.webp";
 export type ArticleSource = {
   markdown: string;
   image: string;
+  imageWidth: number;
+  imageHeight: number;
 };
 
 export const articleSources = [
-  { markdown: heicToPngMac, image: heicImage },
-  { markdown: mergePdfMac, image: mergePdfImage },
-  { markdown: extractAudioFromVideoMac, image: extractAudioImage },
-  { markdown: stopUsingOnlineConverters, image: privacyImage },
-  { markdown: openRar7zMac, image: archiveImage },
-  { markdown: flacToM4aWavMac, image: flacImage },
-  { markdown: pdfToJpgPngMac, image: pdfExportImage },
-  { markdown: voiceMemosToWavMac, image: voiceMemosImage },
-  { markdown: removeBackgroundMac, image: removeBgEnhanceImage },
-  { markdown: compressFilesMac, image: compressMediaImage },
-  { markdown: enhancePhotosMac, image: removeBgEnhanceImage },
-  { markdown: webpHeifConverterMac, image: batchConvertImage },
+  { markdown: heicToPngMac, image: heicImage, imageWidth: 2752, imageHeight: 1536 },
+  { markdown: mergePdfMac, image: mergePdfImage, imageWidth: 1376, imageHeight: 768 },
+  { markdown: extractAudioFromVideoMac, image: extractAudioImage, imageWidth: 1056, imageHeight: 1008 },
+  { markdown: stopUsingOnlineConverters, image: privacyImage, imageWidth: 779, imageHeight: 360 },
+  { markdown: openRar7zMac, image: archiveImage, imageWidth: 2272, imageHeight: 1292 },
+  { markdown: flacToM4aWavMac, image: flacImage, imageWidth: 763, imageHeight: 636 },
+  { markdown: pdfToJpgPngMac, image: pdfExportImage, imageWidth: 1504, imageHeight: 704 },
+  { markdown: voiceMemosToWavMac, image: voiceMemosImage, imageWidth: 1128, imageHeight: 696 },
+  { markdown: removeBackgroundMac, image: removeBgEnhanceImage, imageWidth: 2880, imageHeight: 1800 },
+  { markdown: compressFilesMac, image: compressMediaImage, imageWidth: 2880, imageHeight: 1800 },
+  { markdown: enhancePhotosMac, image: removeBgEnhanceImage, imageWidth: 2880, imageHeight: 1800 },
+  { markdown: webpHeifConverterMac, image: batchConvertImage, imageWidth: 1920, imageHeight: 1200 },
 ] satisfies ArticleSource[];
 
 export const legacyArticleSlugAliases: Record<string, string> = {
