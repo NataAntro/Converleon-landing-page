@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
@@ -19,7 +20,11 @@ const CATEGORY_ORDER = [
   "Guides",
 ] as const;
 
-const getCategoryId = (category: string) => `category-${category.toLowerCase().replace(/\s+/g, "-")}`;
+const getCategoryId = (category: string) =>
+  `category-${category
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")}`;
 
 const GuideCard = ({ article, compact = false }: { article: Article; compact?: boolean }) => (
   <article className={`glass-card border border-border/60 ${compact ? "rounded-xl p-4" : "rounded-2xl p-6"}`}>
@@ -48,6 +53,17 @@ const Guides = () => {
     categoryId: getCategoryId(category),
     articles: articles.filter((article) => article.category === category),
   }));
+  const [openCategory, setOpenCategory] = useState(categories[0] ?? "");
+
+  const selectCategory = (category: string, categoryId: string) => {
+    setOpenCategory(category);
+    window.requestAnimationFrame(() => {
+      document.getElementById(categoryId)?.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        block: "start",
+      });
+    });
+  };
 
   return (
     <div className="min-h-screen">
@@ -77,36 +93,57 @@ const Guides = () => {
 
           <nav aria-label="Guide categories" className="mb-8 flex flex-wrap gap-2 md:hidden">
             {articlesByCategory.map(({ category, categoryId, articles: categoryArticles }) => (
-              <a
+              <button
                 key={category}
-                href={`#${categoryId}`}
-                className="rounded-full border border-border/70 bg-background/20 px-3 py-2 text-sm font-medium text-foreground/90"
+                type="button"
+                onClick={() => selectCategory(category, categoryId)}
+                aria-pressed={openCategory === category}
+                className="rounded-full border border-border/70 bg-background/20 px-3 py-2 text-left text-sm font-medium text-foreground/90 aria-pressed:border-primary/70 aria-pressed:bg-primary/15"
               >
                 {category} <span className="text-muted-foreground">({categoryArticles.length})</span>
-              </a>
+              </button>
             ))}
           </nav>
 
           <div className="space-y-4 md:hidden">
-            {articlesByCategory.map(({ category, categoryId, articles: categoryArticles }, index) => (
-              <details key={category} open={index === 0} className="group glass-card rounded-2xl border border-border/60">
-                <summary
+            {articlesByCategory.map(({ category, categoryId, articles: categoryArticles }) => {
+              const isOpen = openCategory === category;
+              const buttonId = `${categoryId}-button`;
+              const panelId = `${categoryId}-guides`;
+
+              return (
+                <section
+                  key={category}
                   id={categoryId}
-                  className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 [&::-webkit-details-marker]:hidden"
+                  className="scroll-mt-4 glass-card rounded-2xl border border-border/60"
+                  aria-labelledby={buttonId}
                 >
-                  <span>
-                    <span className="block text-lg font-bold">{category}</span>
-                    <span className="text-sm text-muted-foreground">{categoryArticles.length} guides</span>
-                  </span>
-                  <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="space-y-3 border-t border-border/60 px-4 py-4">
-                  {categoryArticles.map((article) => (
-                    <GuideCard key={article.slug} article={article} compact />
-                  ))}
-                </div>
-              </details>
-            ))}
+                  <button
+                    id={buttonId}
+                    type="button"
+                    aria-expanded={isOpen}
+                    aria-controls={panelId}
+                    onClick={() => setOpenCategory(category)}
+                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                  >
+                    <span>
+                      <span className="block text-lg font-bold">{category}</span>
+                      <span className="text-sm text-muted-foreground">{categoryArticles.length} guides</span>
+                    </span>
+                    <ChevronDown
+                      className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  <div id={panelId} hidden={!isOpen} className="space-y-3 border-t border-border/60 px-4 py-4">
+                    {categoryArticles.map((article) => (
+                      <GuideCard key={article.slug} article={article} compact />
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
           </div>
 
           <div className="hidden space-y-16 md:block">
