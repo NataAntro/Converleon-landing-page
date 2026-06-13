@@ -35,23 +35,24 @@ const Hero = () => {
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight text-center md:text-left">
             One app for every
             <br />
-            <span className="gradient-text">file job on Mac</span>
+            <span>file job on </span>
+            <span className="text-accent">Mac</span>
           </h2>
         </div>
           
-          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 mb-5 md:mb-6 text-lg md:text-3xl font-semibold">
-            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2 w-full max-w-sm md:w-auto md:max-w-none justify-center">
-              <Sparkles className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+          <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mb-5 md:mb-6 text-base md:text-xl font-semibold text-foreground/90">
+            <div className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-background/25 px-4 py-2 w-full max-w-xs md:w-auto md:max-w-none backdrop-blur">
+              <Sparkles className="h-4 w-4 text-primary/80" />
               <span>One Drop</span>
             </div>
-            <ArrowRight className="h-6 w-6 md:h-8 md:w-8 text-primary rotate-90 md:rotate-0" />
-            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2 w-full max-w-sm md:w-auto md:max-w-none justify-center">
-              <MousePointerClick className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+            <ArrowRight className="h-5 w-5 text-primary/60 rotate-90 md:rotate-0" />
+            <div className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-background/25 px-4 py-2 w-full max-w-xs md:w-auto md:max-w-none backdrop-blur">
+              <MousePointerClick className="h-4 w-4 text-primary/80" />
               <span>One Tap</span>
             </div>
-            <ArrowRight className="h-6 w-6 md:h-8 md:w-8 text-primary rotate-90 md:rotate-0" />
-            <div className="glass-card px-6 py-3 rounded-2xl flex items-center gap-2 w-full max-w-sm md:w-auto md:max-w-none justify-center">
-              <Check className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+            <ArrowRight className="h-5 w-5 text-primary/60 rotate-90 md:rotate-0" />
+            <div className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-background/25 px-4 py-2 w-full max-w-xs md:w-auto md:max-w-none backdrop-blur">
+              <Check className="h-4 w-4 text-primary/80" />
               <span>Done</span>
             </div>
           </div>
@@ -92,11 +93,9 @@ const Hero = () => {
         </div>
         
         <div className="relative max-w-5xl mx-auto animate-scale-in" style={{ animationDelay: "0.2s" }}>
-          <div className="mb-5 text-center md:mb-7">
-            <h3 className="text-3xl font-bold leading-tight md:text-5xl">
-              Watch <span className="gradient-text">Converleon</span> in action
-            </h3>
-            <div className="mx-auto mt-3 h-px w-40 bg-gradient-to-r from-transparent via-primary/70 to-transparent" />
+          <div className="mb-4 text-center md:mb-5">
+            <h3 className="text-2xl font-bold leading-tight text-foreground md:text-3xl">See it in action</h3>
+            <div className="mx-auto mt-3 h-px w-28 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
           </div>
           <div className="glass-card rounded-3xl p-3 shadow-2xl md:p-4">
             <div className="relative overflow-hidden rounded-2xl">
@@ -119,24 +118,26 @@ const Hero = () => {
                   aria-label="Play the Converleon product demo"
                   onClick={() => setIsDemoPlaying(true)}
                 >
-                  <img
-                    src={heroImage}
-                    alt="Converleon app interface showing file conversion workflow"
-                    width={1920}
-                    height={1200}
-                    className="w-full h-auto transition duration-500 group-hover:scale-[1.01]"
-                  />
-                  <span className="absolute inset-0 bg-gradient-to-t from-background/60 via-background/10 to-transparent transition group-hover:from-background/70" />
-                  <span className="absolute inset-0 flex items-center justify-center">
-                    <span className="flex h-20 w-20 items-center justify-center rounded-full border border-white/30 bg-primary/90 text-primary-foreground shadow-2xl shadow-primary/30 transition group-hover:scale-105 group-hover:bg-primary md:h-24 md:w-24">
-                      <Play className="h-8 w-8 translate-x-0.5 fill-primary-foreground md:h-10 md:w-10" />
+                  <AspectRatio ratio={16 / 9}>
+                    <img
+                      src={heroImage}
+                      alt="Converleon app interface showing file conversion workflow"
+                      width={1920}
+                      height={1200}
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.01]"
+                    />
+                    <span className="absolute inset-0 bg-gradient-to-t from-background/60 via-background/10 to-transparent transition group-hover:from-background/70" />
+                    <span className="absolute inset-0 flex items-center justify-center">
+                      <span className="flex h-20 w-20 items-center justify-center rounded-full border border-white/30 bg-primary/90 text-primary-foreground shadow-2xl shadow-primary/30 transition group-hover:scale-105 group-hover:bg-primary md:h-24 md:w-24">
+                        <Play className="h-8 w-8 translate-x-0.5 fill-primary-foreground md:h-10 md:w-10" />
+                      </span>
                     </span>
-                  </span>
-                  <span className="absolute inset-x-4 bottom-4 flex justify-center md:bottom-6">
-                    <span className="rounded-full border border-white/15 bg-background/70 px-5 py-2 text-sm font-semibold text-foreground shadow-lg backdrop-blur md:text-base">
-                      Play the demo
+                    <span className="absolute inset-x-4 bottom-4 flex justify-center md:bottom-6">
+                      <span className="rounded-full border border-white/15 bg-background/70 px-5 py-2 text-sm font-semibold text-foreground shadow-lg backdrop-blur md:text-base">
+                        Play the demo
+                      </span>
                     </span>
-                  </span>
+                  </AspectRatio>
                 </button>
               )}
             </div>
