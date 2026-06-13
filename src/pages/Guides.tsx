@@ -15,6 +15,7 @@ const CATEGORY_ORDER = [
   "Media Compression",
   "Archives",
   "Privacy & Offline",
+  "Guides",
 ] as const;
 
 const Guides = () => {

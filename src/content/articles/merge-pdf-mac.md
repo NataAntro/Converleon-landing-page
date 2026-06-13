@@ -42,7 +42,7 @@ The whole point here is treating different file types as one batch headed for on
 A recent update made the merge smarter about mixed input, and it's worth knowing what happens under the hood:
 
 - **PDFs** are added page by page, in order.
-- **Images** each become their own PDF page — JPG, PNG, GIF, HEIC, HEIF, HIF, BMP, WEBP, TIFF are all fair game.
+- **Images** each become their own PDF page — JPG, PNG, GIF, HEIC, HEIF, HIF, BMP, WEBP, TIFF are all fair game. If images are all you're combining, [turning images into a PDF](/blog/images-to-pdf-mac) covers that case on its own.
 - **Documents** (DOCX, DOC, RTF, TXT, HTML, HTM) are converted to PDF first, then folded in. Saved web pages work too — see [converting HTML to PDF](/blog/html-to-pdf-mac).
 - **Mixed batches** with an unsupported file don't fail — Converleon drops that one item and merges the rest.
 

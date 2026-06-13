@@ -57,6 +57,6 @@ The opposite, usually. There's no upload or download leg — the work happens on
 
 ## Wrapping up
 
-Privacy here doesn't ask for extra effort. A native macOS utility does the job in two clicks and the files stay on your drive, which is where contracts and photos belong. Whether you're [merging a PDF](/blog/merge-pdf-mac), [converting iPhone photos](/blog/heic-to-png-mac), or [extracting audio from a video](/blog/extract-audio-from-video-mac), the same offline rule applies throughout.
+Privacy here doesn't ask for extra effort. A native macOS utility does the job in two clicks and the files stay on your drive, which is where contracts and photos belong. Whether you're [merging a PDF](/blog/merge-pdf-mac), [converting iPhone photos](/blog/heic-to-png-mac), or [extracting audio from a video](/blog/extract-audio-from-video-mac), the same offline rule applies throughout. For the full picture of what to look for, see [the best offline file converter for Mac](/blog/best-offline-file-converter-mac).
 
 **[Secure your workflow with Converleon](#)** — private, local file processing.

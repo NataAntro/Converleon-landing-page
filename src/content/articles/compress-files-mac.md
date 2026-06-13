@@ -40,7 +40,7 @@ You're not choosing a codec or guessing at a bitrate. You're saying how much you
 
 The preset is the same idea across media, but the output is tuned to the format:
 
-- **Images** — Converleon shrinks the file and picks the best output: JPG for ordinary photos, PNG for anything with transparency, HEIC for HEIC/HEIF/HIF sources.
+- **Images** — Converleon shrinks the file and picks the best output: JPG for ordinary photos, PNG for anything with transparency, HEIC for HEIC/HEIF/HIF sources. If your goal is specifically smaller photos for email or uploads, [reducing photo file size](/blog/reduce-photo-size-mac) walks through it.
 - **Video** — saved as an optimized MP4, the format that plays everywhere. There's a dedicated walkthrough in [compressing video on Mac](/blog/compress-video-mac).
 - **Audio** — re-encoded to a more compact M4A, with the bitrate scaled to the preset you chose.
 

@@ -52,7 +52,7 @@ Converleon handles one file or several hundred the same way.
 ## FAQ
 
 **Can I convert HEIC to JPG instead?**
-Yes. Converleon exports HEIC to JPG, PNG, BMP, TIFF, and PDF.
+Yes. Converleon exports HEIC to JPG, PNG, BMP, TIFF, and PDF — [the HEIC to JPG guide](/blog/heic-to-jpg-mac) covers when JPG is the better choice.
 
 **Does the conversion change the photo's quality?**
 No. The output is a fresh file in a new format; the visible image stays intact.

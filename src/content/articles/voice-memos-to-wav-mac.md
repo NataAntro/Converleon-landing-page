@@ -1,6 +1,6 @@
 ---
 title: "Convert iPhone Voice Memos to WAV on Mac (Batch)"
-meta_description: "Voice Memos export as M4A, but editors want WAV. Batch-convert iPhone recordings to WAV on Mac — offline and ready for Logic, Audacity, or Premiere."
+meta_description: "Voice Memos export as M4A, but editors want WAV. Batch-convert iPhone recordings to WAV on Mac — offline, lossless, ready for Logic, Audacity, or Premiere."
 slug: voice-memos-to-wav-mac
 category: "Audio & Video"
 date_published: "2026-06-13"
@@ -47,7 +47,7 @@ Voice memos can hold sensitive interviews and private notes. Web converters need
 ## FAQ
 
 **Can I convert M4A to MP3?**
-Converleon focuses on high-quality outputs and supports M4A, WAV, AIFF, FLAC, and CAF, where WAV is usually the preferred editing format.
+Converleon focuses on high-quality outputs and supports M4A, WAV, AIFF, FLAC, and CAF, where WAV is usually the preferred editing format. For M4A files that didn't come from Voice Memos, [the M4A to WAV guide](/blog/m4a-to-wav-mac) covers the general case.
 
 **Does it handle long recordings?**
 Yes. There's no short-clip limit, so full lectures and interviews convert the same way.

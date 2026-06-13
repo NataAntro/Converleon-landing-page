@@ -63,6 +63,6 @@ Converleon prompts you instead of producing a blank result, so you don't end up 
 
 ## Wrapping up
 
-A clean cutout shouldn't mean a subscription or an upload. Drop the image, pick Remove BG, and you have a transparent PNG on your drive. If you also want the photo to look its best before cutting it out, [the built-in Enhance tool](/blog/enhance-photos-mac) handles color and contrast in the same app.
+A clean cutout shouldn't mean a subscription or an upload. Drop the image, pick Remove BG, and you have a transparent PNG on your drive. If you also want the photo to look its best before cutting it out, [the built-in Enhance tool](/blog/enhance-photos-mac) handles color and contrast in the same app. And if you're specifically after [a transparent background](/blog/transparent-background-mac), that guide focuses on the format side of it.
 
 **[Download Converleon for Mac](#)** — remove backgrounds offline, save transparent PNGs.

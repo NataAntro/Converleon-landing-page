@@ -28,6 +28,7 @@ const CATEGORY_ORDER = [
   "Media Compression",
   "Archives",
   "Privacy & Offline",
+  "Guides",
 ];
 
 const legacyAliases = {
@@ -43,21 +44,30 @@ const legacyAliases = {
 
 const articleImageNames = {
   "heic-to-png-mac": "article1",
+  "heic-to-jpg-mac": "article1",
+  "heic-wont-open-mac": "article1",
+  "heic-vs-jpg-vs-png": "batch-convert",
+  "png-to-jpg-mac": "batch-convert",
   "merge-pdf-mac": "article2",
+  "images-to-pdf-mac": "article2",
   "extract-audio-from-video-mac": "article3",
   "stop-using-online-converters": "article4",
   "open-rar-7z-mac": "article_rar_7z",
   "flac-to-m4a-wav-mac": "article_flac",
+  "m4a-to-wav-mac": "article_flac",
   "pdf-to-jpg-png-mac": "article_pdf_export",
   "voice-memos-to-wav-mac": "article_voice_memos",
   "remove-background-mac": "removebg-enhance",
+  "transparent-background-mac": "removebg-enhance",
   "compress-files-mac": "compress-media",
+  "reduce-photo-size-mac": "compress-media",
   "enhance-photos-mac": "removebg-enhance",
   "webp-heif-converter-mac": "batch-convert",
   "mov-to-mp4-mac": "video-audio",
   "webp-to-png-mac": "batch-convert",
   "html-to-pdf-mac": "article2",
   "compress-video-mac": "compress-media",
+  "best-offline-file-converter-mac": "hero-screenshot",
 };
 
 function escapeHtml(value = "") {
