@@ -7,14 +7,14 @@ import { buttonVariants } from "@/components/ui/button";
 const ArticleBackLink = () => {
   return (
     <Link
-      to="/#learn-guides"
+      to="/guides/"
       className={cn(
         buttonVariants({ variant: "outline" }),
         "glass-card border-border/60 hover:bg-accent/50 mb-2 w-fit",
       )}
     >
       <ArrowLeft className="h-4 w-4" />
-      Back to guides
+      All guides
     </Link>
   );
 };

@@ -2,6 +2,9 @@
 title: "Why Offline File Converters Beat Web Tools on Mac"
 meta_description: "Web converters mean uploading contracts, photos, and audio to servers you don't control. Here's why a native, offline Mac converter is the safer default."
 slug: stop-using-online-converters
+category: "Privacy & Offline"
+date_published: "2026-06-13"
+date_modified: "2026-06-13"
 ---
 
 # Why You Should Stop Using Online File Converters

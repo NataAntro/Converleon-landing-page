@@ -2,6 +2,9 @@
 title: "How to Open RAR and 7Z Files on Mac (No Command Line)"
 meta_description: "macOS won't open your RAR or 7Z file? Unpack archives or repack them to ZIP on Mac with drag-and-drop — offline, no Terminal, broken filenames fixed."
 slug: open-rar-7z-mac
+category: "Archives"
+date_published: "2026-06-13"
+date_modified: "2026-06-13"
 ---
 
 # How to Open RAR and 7Z Files on Mac (No Command Line)

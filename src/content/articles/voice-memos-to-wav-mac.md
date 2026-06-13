@@ -1,7 +1,10 @@
 ---
 title: "Convert iPhone Voice Memos to WAV on Mac (Batch)"
-meta_description: "Voice Memos export as M4A, but editors want WAV. Batch-convert iPhone recordings to WAV on Mac — offline, lossless, ready for Logic, Audacity, or Premiere."
+meta_description: "Voice Memos export as M4A, but editors want WAV. Batch-convert iPhone recordings to WAV on Mac — offline and ready for Logic, Audacity, or Premiere."
 slug: voice-memos-to-wav-mac
+category: "Audio & Video"
+date_published: "2026-06-13"
+date_modified: "2026-06-13"
 ---
 
 # How to Convert iPhone Voice Memos to WAV on Mac (Batch)

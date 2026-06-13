@@ -2,6 +2,9 @@
 title: "Compress Photos, Videos & Audio on Mac with Simple Presets"
 meta_description: "Shrink images, videos, and audio on Mac with three presets — Smallest, Balanced, Quality. Offline compression that picks the right output format for you."
 slug: compress-files-mac
+category: "Media Compression"
+date_published: "2026-06-13"
+date_modified: "2026-06-13"
 ---
 
 # How to Compress Photos, Videos, and Audio on Mac (Simple Presets)
@@ -38,7 +41,7 @@ You're not choosing a codec or guessing at a bitrate. You're saying how much you
 The preset is the same idea across media, but the output is tuned to the format:
 
 - **Images** — Converleon shrinks the file and picks the best output: JPG for ordinary photos, PNG for anything with transparency, HEIC for HEIC/HEIF/HIF sources.
-- **Video** — saved as an optimized MP4, the format that plays everywhere.
+- **Video** — saved as an optimized MP4, the format that plays everywhere. There's a dedicated walkthrough in [compressing video on Mac](/blog/compress-video-mac).
 - **Audio** — re-encoded to a more compact M4A, with the bitrate scaled to the preset you chose.
 
 ## Why compress locally

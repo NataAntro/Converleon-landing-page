@@ -11,12 +11,6 @@ All colors MUST be HSL.
     --background: 263 100% 8%;
     --foreground: 280 30% 95%;
 
-    --card: 263 52% 15%;
-    --card-foreground: 280 30% 95%;
-
-    --popover: 263 52% 12%;
-    --popover-foreground: 280 30% 95%;
-
     --primary: 290 80% 65%;
     --primary-foreground: 280 30% 98%;
 
@@ -38,15 +32,6 @@ All colors MUST be HSL.
 
     --radius: 1rem;
 
-    --sidebar-background: 263 52% 10%;
-    --sidebar-foreground: 280 30% 95%;
-    --sidebar-primary: 290 80% 65%;
-    --sidebar-primary-foreground: 280 30% 98%;
-    --sidebar-accent: 263 30% 20%;
-    --sidebar-accent-foreground: 280 30% 95%;
-    --sidebar-border: 263 30% 20%;
-    --sidebar-ring: 290 80% 65%;
-
     /* Custom gradients */
     --gradient-hero: linear-gradient(135deg, hsl(220 90% 15%), hsl(263 80% 20%), hsl(290 70% 30%), hsl(310 60% 35%));
     --gradient-card: linear-gradient(135deg, hsl(263 40% 20% / 0.5), hsl(290 40% 25% / 0.5));
@@ -55,44 +40,6 @@ All colors MUST be HSL.
     /* Glass effects */
     --glass-bg: hsl(263 52% 15% / 0.4);
     --glass-border: hsl(280 30% 95% / 0.1);
-  }
-
-  .dark {
-    --background: 263 100% 8%;
-    --foreground: 280 30% 95%;
-
-    --card: 263 52% 15%;
-    --card-foreground: 280 30% 95%;
-
-    --popover: 263 52% 12%;
-    --popover-foreground: 280 30% 95%;
-
-    --primary: 290 80% 65%;
-    --primary-foreground: 280 30% 98%;
-
-    --secondary: 263 52% 28%;
-    --secondary-foreground: 280 30% 95%;
-
-    --muted: 263 30% 25%;
-    --muted-foreground: 280 15% 70%;
-
-    --accent: 310 90% 70%;
-    --accent-foreground: 280 30% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 280 30% 98%;
-
-    --border: 263 30% 25%;
-    --input: 263 30% 20%;
-    --ring: 290 80% 65%;
-    --sidebar-background: 263 52% 10%;
-    --sidebar-foreground: 280 30% 95%;
-    --sidebar-primary: 290 80% 65%;
-    --sidebar-primary-foreground: 280 30% 98%;
-    --sidebar-accent: 263 30% 20%;
-    --sidebar-accent-foreground: 280 30% 95%;
-    --sidebar-border: 263 30% 20%;
-    --sidebar-ring: 290 80% 65%;
   }
 }
 
@@ -110,6 +57,52 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  .seo-static-page {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+  }
+
+  .seo-static-page h1,
+  .seo-static-page h2,
+  .seo-static-page h3 {
+    margin: 1.5rem 0 0.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .seo-static-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .seo-static-page h2 {
+    font-size: 1.75rem;
+  }
+
+  .seo-static-page p,
+  .seo-static-page li,
+  .seo-static-page figcaption {
+    margin: 0.75rem 0;
+    color: hsl(var(--muted-foreground));
+    line-height: 1.7;
+  }
+
+  .seo-static-page ul,
+  .seo-static-page ol {
+    padding-left: 1.5rem;
+  }
+
+  .seo-static-page a {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+  }
+
+  .seo-static-page img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+
   .glass-card {
     background: var(--glass-bg);
     backdrop-filter: blur(20px);

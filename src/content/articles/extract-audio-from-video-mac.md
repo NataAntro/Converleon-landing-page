@@ -2,9 +2,12 @@
 title: "Extract Audio from Video on Mac: MOV to WAV & M4A"
 meta_description: "Pull the audio track out of a MOV or MP4 on Mac without a video editor. Export WAV for editing or M4A for playback, offline and in seconds."
 slug: extract-audio-from-video-mac
+category: "Audio & Video"
+date_published: "2026-06-13"
+date_modified: "2026-06-13"
 ---
 
-# Extract Audio from Video on Mac: MOV to WAV & M4A (No Quality Loss)
+# Extract Audio from Video on Mac: MOV to WAV & M4A Offline
 
 You filmed a concert, recorded a lecture, or saved a video memo, and now you only want the sound. Opening a full editor to grab one audio track is overkill. Drop the file, pick an audio format, and export — that's the whole job.
 
@@ -59,4 +62,4 @@ Export WAV — it's uncompressed and predictable in Logic, Audacity, and Premier
 
 Getting sound out of a video doesn't call for a studio editor. Drop the file, pick a format, done — clean audio with no upload wait. If your library is in FLAC instead, [converting FLAC to Apple-friendly M4A](/blog/flac-to-m4a-wav-mac) works the same way.
 
-**[Download Converleon for Mac](#)** — extract lossless audio on-device.
+**[Download Converleon for Mac](#)** — extract audio from video on-device.

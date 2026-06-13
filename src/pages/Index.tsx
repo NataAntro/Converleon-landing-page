@@ -9,6 +9,11 @@ import FinalCTA from "@/components/FinalCTA";
 import Formats from "@/components/Formats";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import { organizationSchema, Seo, softwareApplicationSchema } from "@/lib/seo";
+
+const HOME_TITLE = "Offline File Converter for Mac | Converleon";
+const HOME_DESCRIPTION =
+  "Convert images, video, audio, documents, PDFs, and archives offline on Mac. Batch-convert mixed files with no uploads or complicated setup.";
 
 const Index = () => {
   const location = useLocation();
@@ -30,6 +35,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Seo
+        title={HOME_TITLE}
+        description={HOME_DESCRIPTION}
+        path="/"
+        jsonLd={[organizationSchema, softwareApplicationSchema]}
+      />
       <Hero />
       <Benefits />
       <ArticlesCarousel />

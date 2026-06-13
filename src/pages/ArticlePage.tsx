@@ -1,219 +1,15 @@
-import { ReactNode, useEffect, useMemo } from "react";
-import { useParams } from "react-router-dom";
+import { ReactNode, useMemo } from "react";
+import { Link, useParams } from "react-router-dom";
 
 import Footer from "@/components/Footer";
 import ArticleBackLink from "@/components/ArticleBackLink";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { buttonVariants } from "@/components/ui/button";
-import { articleSources, legacyArticleSlugAliases } from "@/data/articles";
+import { articleBySlug, articles, ArticleBlock, resolveArticleSlug } from "@/data/articleCatalog";
+import { breadcrumbSchema, Seo, SITE_URL } from "@/lib/seo";
 import { cn } from "@/lib/utils";
 
 const APP_STORE_URL = "https://apps.apple.com/app/converleon/id6751464821";
-
-type ArticleMeta = {
-  title: string;
-  meta_description: string;
-  slug: string;
-};
-
-type Article = ArticleMeta & {
-  image: string;
-  imageWidth: number;
-  imageHeight: number;
-  blocks: ArticleBlock[];
-};
-
-type ArticleBlock =
-  | { type: "heading"; level: 1 | 2 | 3; text: string }
-  | { type: "paragraph"; text: string }
-  | { type: "unordered-list"; items: string[] }
-  | { type: "ordered-list"; items: string[] }
-  | { type: "figure"; alt: string; caption: string }
-  | { type: "alert"; title: string; description: string }
-  | { type: "cta"; label: string; description: string };
-
-const stopPatterns = [
-  /^#{1,3}\s+/,
-  /^-\s+/,
-  /^\d+\.\s+/,
-  /^>\s?/,
-  /^<figure>/,
-];
-
-function parseFrontmatter(markdown: string) {
-  const match = markdown.match(/^---\n([\s\S]*?)\n---\n?/);
-  if (!match) {
-    throw new Error("Article is missing frontmatter.");
-  }
-
-  const meta = match[1].split("\n").reduce<ArticleMeta>(
-    (acc, line) => {
-      const separatorIndex = line.indexOf(":");
-      if (separatorIndex === -1) return acc;
-
-      const key = line.slice(0, separatorIndex).trim() as keyof ArticleMeta;
-      const value = line
-        .slice(separatorIndex + 1)
-        .trim()
-        .replace(/^"|"$/g, "");
-
-      if (key === "title" || key === "meta_description" || key === "slug") {
-        acc[key] = value;
-      }
-
-      return acc;
-    },
-    { title: "", meta_description: "", slug: "" },
-  );
-
-  return {
-    meta,
-    body: markdown.slice(match[0].length),
-  };
-}
-
-function parseFigure(lines: string[]) {
-  const html = lines.join("\n");
-  return {
-    alt: html.match(/alt="([^"]*)"/)?.[1] ?? "",
-    caption: html.match(/<figcaption>([\s\S]*?)<\/figcaption>/)?.[1].trim() ?? "",
-  };
-}
-
-function parseCallout(text: string): ArticleBlock | null {
-  const alertMatch = text.match(/^\*\*(Tip|Managing passwords):\*\*\s+(.+)$/);
-  if (alertMatch) {
-    return {
-      type: "alert",
-      title: alertMatch[1],
-      description: alertMatch[2],
-    };
-  }
-
-  const ctaMatch = text.match(/^\*\*\[([^\]]+)\]\(#\)\*\*\s+[—-]\s+(.+)$/);
-  if (ctaMatch) {
-    return {
-      type: "cta",
-      label: ctaMatch[1],
-      description: ctaMatch[2],
-    };
-  }
-
-  return null;
-}
-
-function parseBlocks(body: string): ArticleBlock[] {
-  const lines = body.split("\n");
-  const blocks: ArticleBlock[] = [];
-  let index = 0;
-
-  while (index < lines.length) {
-    const line = lines[index].trim();
-
-    if (!line) {
-      index += 1;
-      continue;
-    }
-
-    const heading = line.match(/^(#{1,3})\s+(.+)$/);
-    if (heading) {
-      blocks.push({
-        type: "heading",
-        level: heading[1].length as 1 | 2 | 3,
-        text: heading[2],
-      });
-      index += 1;
-      continue;
-    }
-
-    if (line.startsWith("<figure>")) {
-      const figureLines: string[] = [];
-      while (index < lines.length) {
-        figureLines.push(lines[index]);
-        if (lines[index].includes("</figure>")) break;
-        index += 1;
-      }
-      blocks.push({ type: "figure", ...parseFigure(figureLines) });
-      index += 1;
-      continue;
-    }
-
-    if (line.startsWith(">")) {
-      const quoteLines: string[] = [];
-      while (index < lines.length && lines[index].trim().startsWith(">")) {
-        quoteLines.push(lines[index].trim().replace(/^>\s?/, ""));
-        index += 1;
-      }
-      const quote = quoteLines.join(" ");
-      const titledQuote = quote.match(/^\*\*([^*]+):\*\*\s+(.+)$/);
-      blocks.push({
-        type: "alert",
-        title: titledQuote?.[1] ?? "Note",
-        description: titledQuote?.[2] ?? quote,
-      });
-      continue;
-    }
-
-    if (line.startsWith("- ")) {
-      const items: string[] = [];
-      while (index < lines.length && lines[index].trim().startsWith("- ")) {
-        items.push(lines[index].trim().replace(/^-\s+/, ""));
-        index += 1;
-      }
-      blocks.push({ type: "unordered-list", items });
-      continue;
-    }
-
-    if (/^\d+\.\s+/.test(line)) {
-      const items: string[] = [];
-      while (index < lines.length && /^\d+\.\s+/.test(lines[index].trim())) {
-        items.push(lines[index].trim().replace(/^\d+\.\s+/, ""));
-        index += 1;
-      }
-      blocks.push({ type: "ordered-list", items });
-      continue;
-    }
-
-    const paragraphLines: string[] = [];
-    while (index < lines.length) {
-      const current = lines[index].trim();
-      if (!current) break;
-      if (paragraphLines.length > 0 && stopPatterns.some((pattern) => pattern.test(current))) break;
-      paragraphLines.push(current);
-      index += 1;
-    }
-
-    const paragraph = paragraphLines.join(" ");
-    blocks.push(parseCallout(paragraph) ?? { type: "paragraph", text: paragraph });
-  }
-
-  return blocks;
-}
-
-function parseArticles() {
-  return articleSources.map(({ markdown, image, imageWidth, imageHeight }) => {
-    const { meta, body } = parseFrontmatter(markdown);
-    return {
-      ...meta,
-      image,
-      imageWidth,
-      imageHeight,
-      blocks: parseBlocks(body),
-    };
-  });
-}
-
-export const articles = parseArticles();
-
-export const articleBySlug = articles.reduce<Record<string, Article>>((acc, article) => {
-  acc[article.slug] = article;
-  return acc;
-}, {});
-
-export function resolveArticleSlug(slug: string | undefined) {
-  if (!slug) return undefined;
-  return legacyArticleSlugAliases[slug] ?? slug;
-}
 
 function renderInline(text: string): ReactNode[] {
   const nodes: ReactNode[] = [];
@@ -358,7 +154,7 @@ const ArticlePage = ({ slug: explicitSlug }: { slug?: string }) => {
     const title = titleBlock?.text ?? article.title;
     const titleIndex = titleBlock ? article.blocks.indexOf(titleBlock) : -1;
     const afterTitle = article.blocks.slice(titleIndex + 1);
-    const leadBlocks = afterTitle.filter((block, index) => {
+    const leadBlocks = afterTitle.filter((block, index): block is Extract<ArticleBlock, { type: "paragraph" }> => {
       if (block.type !== "paragraph") return false;
       return afterTitle.slice(0, index).every((previous) => previous.type === "paragraph");
     });
@@ -366,37 +162,6 @@ const ArticlePage = ({ slug: explicitSlug }: { slug?: string }) => {
     const bodyBlocks = article.blocks.slice(bodyStartIndex);
 
     return { title, leadBlocks, bodyBlocks };
-  }, [article]);
-
-  useEffect(() => {
-    if (!article) return;
-
-    const previousTitle = document.title;
-    const existingDescription = document.querySelector('meta[name="description"]');
-    const previousDescription = existingDescription?.getAttribute("content") ?? null;
-
-    document.title = article.title;
-
-    let descriptionTag = existingDescription;
-    if (!descriptionTag) {
-      descriptionTag = document.createElement("meta");
-      descriptionTag.setAttribute("name", "description");
-      document.head.appendChild(descriptionTag);
-    }
-
-    descriptionTag.setAttribute("content", article.meta_description);
-
-    return () => {
-      document.title = previousTitle;
-
-      if (descriptionTag) {
-        if (previousDescription === null) {
-          descriptionTag.removeAttribute("content");
-        } else {
-          descriptionTag.setAttribute("content", previousDescription);
-        }
-      }
-    };
   }, [article]);
 
   if (!article || !content) {
@@ -415,14 +180,68 @@ const ArticlePage = ({ slug: explicitSlug }: { slug?: string }) => {
     );
   }
 
+  const articlePath = `/blog/${article.slug}/`;
+  const articleImage = new URL(article.image, SITE_URL).href;
+  const relatedArticles = articles
+    .filter((candidate) => candidate.slug !== article.slug)
+    .sort((left, right) => Number(right.category === article.category) - Number(left.category === article.category))
+    .slice(0, 3);
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.meta_description,
+    image: articleImage,
+    datePublished: article.date_published,
+    dateModified: article.date_modified,
+    author: {
+      "@type": "Organization",
+      name: "Converleon",
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Converleon",
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/apple-touch-icon.png`,
+      },
+    },
+    mainEntityOfPage: `${SITE_URL}${articlePath}`,
+  };
+
   return (
     <div className="min-h-screen">
+      <Seo
+        title={article.title}
+        description={article.meta_description}
+        path={articlePath}
+        image={articleImage}
+        type="article"
+        jsonLd={[
+          articleSchema,
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Guides", path: "/guides/" },
+            { name: article.title, path: articlePath },
+          ]),
+        ]}
+      />
       <main className="px-4 py-16 md:py-20">
-        <div className="mx-auto max-w-4xl mb-4">
+        <div className="mx-auto max-w-4xl mb-4 space-y-4">
+          <nav aria-label="Breadcrumb" className="text-sm text-muted-foreground">
+            <ol className="flex flex-wrap items-center gap-2">
+              <li><Link to="/" className="hover:text-primary">Home</Link></li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page"><Link to="/guides/" className="hover:text-primary">Guides</Link></li>
+            </ol>
+          </nav>
           <ArticleBackLink />
         </div>
         <article className="mx-auto max-w-4xl glass-card rounded-3xl p-6 md:p-10 lg:p-12 space-y-8">
           <header className="space-y-5">
+            <p className="text-sm font-medium text-primary">{article.category}</p>
             <h1 className="text-3xl md:text-5xl font-bold leading-tight">{renderInline(content.title)}</h1>
             {content.leadBlocks.map((block) => (
               <p key={block.text} className="text-lg text-muted-foreground leading-relaxed">
@@ -441,6 +260,22 @@ const ArticlePage = ({ slug: explicitSlug }: { slug?: string }) => {
             />
           ))}
         </article>
+
+        <section className="mx-auto max-w-4xl pt-12" aria-labelledby="related-guides-title">
+          <h2 id="related-guides-title" className="mb-6 text-2xl md:text-3xl font-bold">Related guides</h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            {relatedArticles.map((related) => (
+              <Link
+                key={related.slug}
+                to={`/blog/${related.slug}/`}
+                className="glass-card rounded-2xl border border-border/60 p-5 transition-colors hover:border-primary/50"
+              >
+                <p className="mb-2 text-xs font-medium uppercase tracking-wide text-primary">{related.category}</p>
+                <h3 className="font-semibold leading-snug">{related.title}</h3>
+              </Link>
+            ))}
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

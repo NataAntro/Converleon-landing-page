@@ -2,6 +2,9 @@
 title: "Export PDF Pages to JPG, PNG, or Single PDFs on Mac"
 meta_description: "Stop screenshotting PDF pages. Export them as sharp JPG, PNG, TIFF, or HEIC, or split a document into single-page PDFs — offline on Mac, in one pass."
 slug: pdf-to-jpg-png-mac
+category: "PDFs & Documents"
+date_published: "2026-06-13"
+date_modified: "2026-06-13"
 ---
 
 # How to Export PDF Pages to JPG, PNG, or Single PDFs on Mac

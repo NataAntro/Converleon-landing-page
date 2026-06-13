@@ -1,7 +1,10 @@
 ---
 title: "Convert FLAC to M4A or WAV on Mac (Batch & Offline)"
-meta_description: "FLAC won't import into Apple Music? Batch-convert your library to M4A for iPhone playback or WAV for editing — offline on Mac, no uploads, no quality loss."
+meta_description: "FLAC won't import into Apple Music? Batch-convert your library to M4A for iPhone playback or WAV for editing — offline on Mac, with no uploads."
 slug: flac-to-m4a-wav-mac
+category: "Audio & Video"
+date_published: "2026-06-13"
+date_modified: "2026-06-13"
 ---
 
 # How to Convert FLAC to M4A or WAV on Mac (Batch & Offline)

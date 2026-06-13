@@ -11,9 +11,17 @@ const Footer = () => {
           </div>
           
           <div className="md:text-right flex flex-col items-start md:items-end gap-2">
+            <a
+              href="/guides/"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Mac conversion guides
+            </a>
             <p className="text-muted-foreground">
               <span className="font-semibold text-foreground">Support:</span>{" "}
-              converleonapp@gmail.com
+              <a href="mailto:converleonapp@gmail.com" className="hover:text-primary transition-colors">
+                converleonapp@gmail.com
+              </a>
             </p>
             <a 
               href="/privacy-policy.html" 
@@ -21,7 +29,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              Privacy Policy
+              App Privacy Policy
             </a>
           </div>
         </div>

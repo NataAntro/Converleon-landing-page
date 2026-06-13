@@ -5,6 +5,7 @@ import {
   DialogContent,
   DialogTrigger,
   DialogClose,
+  DialogTitle,
 } from "@/components/ui/dialog";
 import { ArrowRight, Check, MousePointerClick, Sparkles, X } from "lucide-react";
 import heroImage from "@/assets/hero-screenshot.webp";
@@ -20,6 +21,7 @@ const Hero = () => {
         <div className="relative mb-12">
           <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold leading-tight relative z-10">
             <span className="gradient-text">Converleon</span>
+            <span className="sr-only"> — Offline File Converter for Mac</span>
           </h1>
           <div className="absolute inset-0 blur-3xl opacity-30 bg-gradient-to-r from-primary via-accent to-primary animate-pulse" />
         </div>
@@ -57,7 +59,9 @@ const Hero = () => {
           </div>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8 leading-relaxed">
-            Batch-convert mixed files, merge PDFs from almost anything, split PDFs page by page, extract audio, remove backgrounds, and pack or unpack archives. No uploads, no setup.
+            Batch-convert mixed files, merge PDFs from almost anything, split PDFs page by page, extract audio, remove backgrounds, and pack or unpack archives.
+            <br />
+            No uploads, no setup.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -74,6 +78,7 @@ const Hero = () => {
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-w-4xl glass-card border-0 [&>button]:hidden">
+                <DialogTitle className="sr-only">How Converleon works</DialogTitle>
                 <div className="flex justify-end">
                   <DialogClose asChild>
                     <Button
@@ -92,6 +97,7 @@ const Hero = () => {
                     title="How Converleon works"
                     className="h-full w-full rounded-lg border"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    loading="lazy"
                     allowFullScreen
                   />
                 </AspectRatio>

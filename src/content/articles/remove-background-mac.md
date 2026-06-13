@@ -2,6 +2,9 @@
 title: "Remove Image Backgrounds on Mac & Save Transparent PNGs"
 meta_description: "Remove backgrounds from images on Mac, fully offline, and save transparent PNGs. Batch-friendly, private, and built into the same drag-and-drop workflow."
 slug: remove-background-mac
+category: "Images"
+date_published: "2026-06-13"
+date_modified: "2026-06-13"
 ---
 
 # How to Remove Image Backgrounds on Mac (Offline, Transparent PNG)

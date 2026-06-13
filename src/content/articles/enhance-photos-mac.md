@@ -2,6 +2,9 @@
 title: "Auto-Enhance Photos on Mac: Color, Contrast & Red-Eye Fix"
 meta_description: "Fix color, contrast, and red-eye on Mac in one click with Converleon's Enhance tool. Offline auto-correction that saves to the right format for each photo."
 slug: enhance-photos-mac
+category: "Images"
+date_published: "2026-06-13"
+date_modified: "2026-06-13"
 ---
 
 # How to Auto-Enhance Photos on Mac (Color, Contrast, Red-Eye)

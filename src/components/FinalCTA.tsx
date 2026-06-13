@@ -33,9 +33,7 @@ const FinalCTA = () => {
                 </a>
               </Button>
               <a 
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=converleonapp@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="mailto:converleonapp@gmail.com"
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" }),
                   "text-lg px-8 py-6 glass-card cursor-pointer"

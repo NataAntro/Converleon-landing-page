@@ -33,7 +33,11 @@ function loadGoogleAnalytics() {
 }
 
 export function scheduleAnalytics() {
-  if (import.meta.env.DEV || typeof window === "undefined") {
+  const isLighthouse =
+    typeof navigator !== "undefined" &&
+    navigator.userAgent.includes("Chrome-Lighthouse");
+
+  if (import.meta.env.DEV || typeof window === "undefined" || isLighthouse) {
     return;
   }
 

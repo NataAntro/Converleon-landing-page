@@ -10,6 +10,10 @@ import removeBackgroundMac from "@/content/articles/remove-background-mac.md?raw
 import compressFilesMac from "@/content/articles/compress-files-mac.md?raw";
 import enhancePhotosMac from "@/content/articles/enhance-photos-mac.md?raw";
 import webpHeifConverterMac from "@/content/articles/webp-heif-converter-mac.md?raw";
+import movToMp4Mac from "@/content/articles/mov-to-mp4-mac.md?raw";
+import webpToPngMac from "@/content/articles/webp-to-png-mac.md?raw";
+import htmlToPdfMac from "@/content/articles/html-to-pdf-mac.md?raw";
+import compressVideoMac from "@/content/articles/compress-video-mac.md?raw";
 
 import heicImage from "@/assets/articles/article1.webp";
 import mergePdfImage from "@/assets/articles/article2.webp";
@@ -22,6 +26,7 @@ import voiceMemosImage from "@/assets/articles/article_voice_memos.webp";
 import removeBgEnhanceImage from "@/assets/removebg-enhance.webp";
 import compressMediaImage from "@/assets/compress-media.webp";
 import batchConvertImage from "@/assets/batch-convert.webp";
+import videoAudioImage from "@/assets/video-audio.webp";
 
 export type ArticleSource = {
   markdown: string;
@@ -43,6 +48,10 @@ export const articleSources = [
   { markdown: compressFilesMac, image: compressMediaImage, imageWidth: 2880, imageHeight: 1800 },
   { markdown: enhancePhotosMac, image: removeBgEnhanceImage, imageWidth: 2880, imageHeight: 1800 },
   { markdown: webpHeifConverterMac, image: batchConvertImage, imageWidth: 1920, imageHeight: 1200 },
+  { markdown: movToMp4Mac, image: videoAudioImage, imageWidth: 1920, imageHeight: 1200 },
+  { markdown: webpToPngMac, image: batchConvertImage, imageWidth: 1920, imageHeight: 1200 },
+  { markdown: htmlToPdfMac, image: mergePdfImage, imageWidth: 1376, imageHeight: 768 },
+  { markdown: compressVideoMac, image: compressMediaImage, imageWidth: 2880, imageHeight: 1800 },
 ] satisfies ArticleSource[];
 
 export const legacyArticleSlugAliases: Record<string, string> = {

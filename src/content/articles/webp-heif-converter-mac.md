@@ -2,6 +2,9 @@
 title: "Convert WEBP, HEIF & HTML Files on Mac (New Formats)"
 meta_description: "Converleon now reads WEBP, HEIF, HIF, and HTML files on Mac. Drag them in and convert offline — turn WEBP to PNG, HEIF to JPG, or HTML to PDF in a click."
 slug: webp-heif-converter-mac
+category: "Images"
+date_published: "2026-06-13"
+date_modified: "2026-06-13"
 ---
 
 # How to Convert WEBP, HEIF, and HTML Files on Mac (New Formats)
@@ -40,9 +43,9 @@ These now drop into Converleon and feed straight into the conversion paths alrea
 
 ## What you can do with each
 
-- **WEBP → PNG or JPG.** The quickest fix for a web image that won't open in older editors or upload to a form.
+- **WEBP → PNG or JPG.** The quickest fix for a web image that won't open in older editors or upload to a form. For a step-by-step walkthrough of just that conversion, see [converting WEBP to PNG on Mac](/blog/webp-to-png-mac).
 - **HEIF / HIF → JPG or PNG.** Bring stray HEIF-family files into line with whatever expects standard images.
-- **HTML / HTM → PDF.** Turn a saved web page or exported report into a clean, shareable PDF.
+- **HTML / HTM → PDF.** Turn a saved web page or exported report into a clean, shareable PDF — [converting HTML to PDF](/blog/html-to-pdf-mac) covers this one in full.
 
 ## Where these fit
 

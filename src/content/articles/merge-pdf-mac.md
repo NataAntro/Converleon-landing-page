@@ -2,6 +2,9 @@
 title: "Merge PDF on Mac: Combine Word, Images & PDF Files in One Pass"
 meta_description: "Merge Word docs, images, and PDFs into one file on Mac — offline, in two clicks. Mixed batches supported, with unsupported files skipped automatically."
 slug: merge-pdf-mac
+category: "PDFs & Documents"
+date_published: "2026-06-13"
+date_modified: "2026-06-13"
 ---
 
 # Merge PDF on Mac: Combine Word, Images & PDF Files
@@ -40,7 +43,7 @@ A recent update made the merge smarter about mixed input, and it's worth knowing
 
 - **PDFs** are added page by page, in order.
 - **Images** each become their own PDF page — JPG, PNG, GIF, HEIC, HEIF, HIF, BMP, WEBP, TIFF are all fair game.
-- **Documents** (DOCX, DOC, RTF, TXT, HTML, HTM) are converted to PDF first, then folded in.
+- **Documents** (DOCX, DOC, RTF, TXT, HTML, HTM) are converted to PDF first, then folded in. Saved web pages work too — see [converting HTML to PDF](/blog/html-to-pdf-mac).
 - **Mixed batches** with an unsupported file don't fail — Converleon drops that one item and merges the rest.
 
 DOCX keeps its images and layout well through the merge. DOC is older and may come through as a text document with some formatting lost.

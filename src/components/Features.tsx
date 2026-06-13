@@ -11,7 +11,7 @@ import heroImage from "@/assets/hero-screenshot.webp";
 const Features = () => {
   const features = [
     {
-      title: "Every file type. The same two steps.",
+      title: "Every file type\nThe same two steps",
       description: "One workflow covers images, video, audio, documents, PDFs, and archives.",
       image: heroImage,
       imageWidth: 1920,
@@ -84,7 +84,7 @@ const Features = () => {
             className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-center`}
           >
             <div className="flex-1 space-y-6">
-              <h3 className="text-3xl md:text-4xl font-bold">
+              <h3 className="text-3xl md:text-4xl font-bold whitespace-pre-line">
                 {feature.title}
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -100,6 +100,8 @@ const Features = () => {
                   width={feature.imageWidth}
                   height={feature.imageHeight}
                   className="w-full h-auto rounded-2xl"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

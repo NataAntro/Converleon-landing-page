@@ -1,8 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-import { articles } from "@/pages/ArticlePage";
+import { articles } from "@/data/articleCatalog";
 import {
   Carousel,
   CarouselContent,
@@ -22,6 +23,9 @@ const ArticlesCarousel = () => {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Browse the guides, then jump straight into the steps.
           </p>
+          <Link to="/guides/" className="mt-4 inline-block font-medium text-primary hover:underline">
+            View all guides
+          </Link>
         </div>
 
         <Carousel

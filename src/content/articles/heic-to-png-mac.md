@@ -2,6 +2,9 @@
 title: "HEIC to PNG on Mac: Batch Convert iPhone Photos Offline"
 meta_description: "Convert HEIC to PNG on Mac in one batch, fully offline. A fast drag-and-drop fix for iPhone photos that won't upload to forms or editors."
 slug: heic-to-png-mac
+category: "Images"
+date_published: "2026-06-13"
+date_modified: "2026-06-13"
 ---
 
 # HEIC to PNG on Mac: Batch Convert iPhone Photos (Offline & Fast)
@@ -55,7 +58,7 @@ Yes. Converleon exports HEIC to JPG, PNG, BMP, TIFF, and PDF.
 No. The output is a fresh file in a new format; the visible image stays intact.
 
 **What about newer formats like HEIF?**
-Those work too — Converleon added WEBP, HEIF, and HIF as inputs in a recent update. See [the supported-formats guide](/blog/webp-heif-converter-mac).
+Those work too — Converleon added WEBP, HEIF, and HIF as inputs in a recent update. See [the supported-formats guide](/blog/webp-heif-converter-mac). The same goes for web images — [converting WEBP to PNG](/blog/webp-to-png-mac) is the matching guide.
 
 ## Wrapping up
 
