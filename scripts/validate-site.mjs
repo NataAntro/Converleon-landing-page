@@ -42,6 +42,17 @@ if (!existsSync(path.join(distDir, "index.html"))) {
 
   for (const filePath of collectHtmlFiles(distDir)) {
     const html = readFileSync(filePath, "utf8");
+    const fileName = path.basename(filePath);
+    const isGoogleSiteVerification = /^google[a-z0-9]+\.html$/.test(fileName);
+
+    if (isGoogleSiteVerification) {
+      const expectedVerification = `google-site-verification: ${fileName}`;
+      if (html.trim() !== expectedVerification) {
+        fail(`${filePath} has invalid Google site verification content.`);
+      }
+      continue;
+    }
+
     const isRedirect = html.includes('content="noindex, follow"') && html.includes("window.location.replace");
     const is404 = filePath.endsWith(`${path.sep}404.html`);
     const isStandalonePolicy = filePath.endsWith(`${path.sep}privacy-policy.html`);
