@@ -53,7 +53,9 @@ if (!existsSync(path.join(distDir, "index.html"))) {
       continue;
     }
 
-    const isRedirect = html.includes('content="noindex, follow"') && html.includes("window.location.replace");
+    const isRedirect =
+      /<meta http-equiv="refresh" content="0; url=[^"]+">/.test(html) &&
+      html.includes("window.location.replace");
     const is404 = filePath.endsWith(`${path.sep}404.html`);
     const isStandalonePolicy = filePath.endsWith(`${path.sep}privacy-policy.html`);
     const needsSecurityMeta = !isRedirect && !is404 && !isStandalonePolicy;

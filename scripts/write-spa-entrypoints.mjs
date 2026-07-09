@@ -406,7 +406,6 @@ async function main() {
     const redirectHtml = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <title>Page moved | Converleon</title>
-<meta name="robots" content="noindex, follow">
 <link rel="canonical" href="${SITE_URL}${destination}">
 <meta http-equiv="refresh" content="0; url=${destination}">
 <script>window.location.replace(${JSON.stringify(destination)});</script>
